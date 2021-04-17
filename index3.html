@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main3.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	  <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@300;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="js/TweenMax.min.js"></script>
+    <script>
+        window.addEventListener('scroll', () => {
+          document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+        }, false);
+    </script>
+    </head>
+<body>
+  <header id="pageHeader">
+    <nav>
+        <div id="navbar">
+          <div id="logo" class="reverse">
+            <div class="mobile-btn" style="font-size:30px;cursor:pointer; font-weight:bold;" onclick="openNav()">&#9776;</div>
+            <div class="logo"><img src="img/LeTS Logo_Colour.png" width="120px" height="120px"></div>
+          </div>
+          <div id="links">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#books">Books</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </nav>
+  </header>
+  <article id="mainArticle">
+    <div class="wrapper">
+        <div class="one"><img src="img/tree.png" height="200px" style="margin-left: 160px;margin-top: 60px">
+          <img src="img/peacock2.png" height="200px" style="margin-left: -150px;margin-top: 80px";>                   
+        </div>
+        <div class="stories">
+          <img src="img/stories.png" height="200px">
+        </div>
+        <div class="sun">
+          <img src="img/sun.png" height="200px" style="margin-top: -80px;margin-left:700px;">
+        </div>
+        <div class="peacock2">
+          <img src="img/peacock.png" height="200px" style="margin-top: 80px;margin-left:600px;">
+        </div>
+        <div class="monster">
+          <img src="img/monster.png" height="200px">
+        </div>
+        <div class="three"><img src="img/lets_illustration2.png" height="600px" width="500px"></div>
+        <div class="eight"><b>The LeTS project is a collaboration between illustrators, authors, animators. 
+          Some of them are younger than fifteen, others are design professionals. 
+          The kids are from village schools of India not exposed to English-oriented education. </b><br><br><br>
+
+          <small>This is how we help them learn English: We teach children to illustrate and narrate stories that they have 
+            heard growing up, in their own language. We convert them into gorgeously produced books in English 
+            and animated films. For the children, the only new element of learning is the English translation; 
+            they are intimately familiar with the rest of the material already. The meta-learning is important 
+            too. The children (and their schools) learn to shoot for, and to expect high quality. 
+            Exchanging their books with other schools gives them pride of ownership and pleasure of sharing.</small></div>
+        <div class="seven" id="about"><img src="img/div2.png" height="600px" width="1600px"></div>
+        <div class="four">Four</div>
+        <div class="drums"><img src="img/drums.png" height="400px"></div>
+        <div class="monsterr"><img src="img/monsterr.png" height="400px"></div>
+        <div class="monkey"><img src="img/monkey.png" height="500px"></div>
+        <div class="nine">
+          <div class="books">
+            <div class="book1"><img src="img/hp_book1.png" height="400px"></div>   
+            <div class="book2"><img src="img/hp_book2.png" height="400px"></div>
+            <div class="bookheading"><h1>Our Books</h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
+              Aenean et eleifend nisi, eget molestie neque. Nam efficitur, ipsum vitae lobortis varius, <br>
+              orci nibh tempus justo, et convallis quam velit ac ante. Proin sapien urna, hendrerit non <br> 
+              posuere quis, eleifend id eros. <br></div>   
+            <div class="book3"><img src="img/hp_book3.png" height="400px"></div>   
+            <div class="book4"><img src="img/hp_book4.png" height="400px"></div>        
+          </div>
+        </div>
+        <div class="ten" id="books"><img src="img/div2.png" height="600px" width="1600px"></div>
+      </div>
+      <div class="boy"><img src="img/boy.png" height="200px"></div>
+      <div class="man"><img src="img/man.png" height="200px"></div>
+  </article>
+  <footer id="pageFooter">Footer</footer>
+</body>
