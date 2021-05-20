@@ -24,11 +24,11 @@ body > div {
 #intro-text-wrapper {
   width: 45%; 
   max-width: 45%;
-  height: 80%;
-  max-height: 80%;
+  height: 85%;
+  max-height: 85%;
   color: rgb(56, 63, 57);
   left: 55%;
-  top: 20%;
+  top: 15%;
 }
 
 
