@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-width: 0px;
+}
+
+body {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right:auto;
+  text-align: center;
+  position: relative;
+}
+
+body > div {
+  /* HTML elements always have some text white space between them because they were meant for text.
+    Remove it by setting font size to zero.
+   */
+  font-size: 0;
+  position: relative;
+}
+
+#intro-text-wrapper {
+  width: 45%; 
+  max-width: 45%;
+  height: 70%;
+  max-height: 70%;
+  color: rgb(56, 63, 57);
+  left: 55%;
+  top: 20%;
+}
+
+
+.body-text {
+  width: 100%;
+  /* font-weight: 500; */
+  /* font-size: 1em; */
+  position: relative;
+  /* margin-bottom: 2em; */
+}
+
+.body-text p {
+  margin-bottom: 1rem;
+}
+
+#logo-text-wrapper {
+  width: 40%; 
+  max-width: 40%;
+  height: 60%;
+  max-height: 60%;
+  color: rgb(56, 63, 57);
+  left: 60%;
+  top: 30%;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+#books-text-wrapper {
+  width: 30%; 
+  max-width: 30%;
+  height: 65%;
+  max-height: 65%;
+  color: rgb(56, 63, 57);
+  left: 30%;
+  top: 25%;
+}
+
+#author-text-wrapper {
+  width: 50%; 
+  max-width: 50%;
+  height: 70%;
+  max-height: 70%;
+  color: rgb(56, 63, 57);
+  left: 60%;
+  top: 5%;
+}
+
+#our-authors {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+
+/* class common to all text wrappers */
+.text-wrapper {
+  font-size: calc(12px + ((1vw - 3.2px) * 0.5));
+  font-family: 'Hepta Slab', serif;
+  line-height: 150%;
+  z-index: 2;
+  text-align: left;
+  padding: 20px;
+  position: absolute;
+  overflow: scroll;
+}
+
+.bg-img {
+  /* for seeing the splits between the background images */
+  /* margin-bottom: 10px; */
+  width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+.text-wrapper {
+  font-size: 8px;
+}
+}

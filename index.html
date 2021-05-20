@@ -1,96 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-	  <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@300;600&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
-    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
-    <script type="text/javascript" src="js/TweenMax.min.js"></script>
-    <script>
-        window.addEventListener('scroll', () => {
-          document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
-        }, false);
-    </script>
-    </head>
-    
-<body>
-  <header id="pageHeader">
-    <nav>
-        <div id="navbar">
-          <div id="logo" class="reverse">
-            <div class="mobile-btn" style="font-size:30px;cursor:pointer; font-weight:bold;" onclick="openNav()">&#9776;</div>
-            <div class="logo"><img src="img/LeTS Logo_Colour.png" width="120px" height="120px"></div>
-          </div>
-          <div id="links">
-            <a href="#">Home</a>
-            <a href="#about">About</a>
-            <a href="#books">Books</a>
-            <a href="#contact">Contact</a>
-          </div>
-        </div>
-      </nav>
-  </header>
-  <article id="mainArticle">
-    <div class="wrapper">
-        <div class="one">
-          <img src="img/peacock2.png" height="200px" style="margin-left: 50px;margin-top: 80px";>                   
-        </div>
-        <!--<img src="img/tree.png" height="200px" style="margin-left: 160px;margin-top: 60px">-->
-        <div class="stories">
-          <img src="img/stories.png" height="280px">
-        </div>
-        <div class="sun">
-          <img src="img/sun.png" height="200px" style="margin-top: -80px;margin-left:700px;">
-        </div>
-        <div class="peacock2">
-          <img src="img/peacock.png" height="200px" style="margin-top: 80px;margin-left:600px;">
-        </div>
-        <div class="monster">
-          <img src="img/monster.png" height="200px">
-        </div>
-        <div class="three"><img src="img/lets_illustration2.png" height="600px" width="500px"></div>
-        <div class="eight"><b><h1>LETS</h1><br>The LeTS project is a collaboration between illustrators, authors, animators. 
-          Some of them are younger than fifteen, others are design professionals. 
-          The kids are from village schools of India not exposed to English-oriented education. </b><br><br><br>
 
-          <small>This is how we help them learn English: We teach children to illustrate and narrate stories that they have 
-            heard growing up, in their own language. We convert them into gorgeously produced books in English 
-            and animated films. For the children, the only new element of learning is the English translation; 
-            they are intimately familiar with the rest of the material already. The meta-learning is important 
-            too. The children (and their schools) learn to shoot for, and to expect high quality. 
-            Exchanging their books with other schools gives them pride of ownership and pleasure of sharing.</small></div>
-        <div class="seven" id="about"><img src="img/div2.png" height="600px" width="1600px" style="margin-left: 200px;"></div>
-       
-        <div class="drums"><img src="img/drums.png" height="400px"></div>
-        <div class="monsterr"><img src="img/monsterr.png" height="400px"></div>
-        <div class="monkey"><img src="img/monkey.png" height="500px"></div>
-        <div class="nine">
-          <div class="books">
-            <div class="book1"><img src="img/hp_book1.png" height="450px"></div>   
-            <div class="book2 zoom"><img src="img/hp_book2.png" height="450px"></div>
-            <div class="bookheading"><h1>Our Books</h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
-              Aenean et eleifend nisi, eget molestie neque. <br> Nam efficitur, ipsum vitae lobortis varius, <br>
-              orci nibh tempus justo, et convallis quam velit ac ante.<br> Proin sapien urna, hendrerit non <br> 
-              posuere quis, eleifend id eros. <br></div>   
-            <div class="book3 zoom"><img src="img/hp_book3.png" height="450px"></div>   
-            <div class="book4 zoom"><img src="img/hp_book4.png" height="450px"></div>        
-          </div>
-        </div>
-        <div class="ten" id="books"><img src="img/div2.png" height="600px" width="1600px"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LeTS: Learn Through Stories</title>
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="hero-section">
+    <img class="bg-img" src="./assets/img/bg-1920-1.jpg" />
+  </div>
+  <div id="intro-section">
+    <div id="intro-text-wrapper" class="text-wrapper">
+      <div class="body-text">
+        <p>The LeTS (Learn Through Stories) project is an initiative of IDC School of Design, IIT Bombay.</p>
+        <p>
+          <strong>
+            It is a collaboration between illustrators, authors, animators. Some are younger than
+            fifteen, others are design professionals. The kids are from village schools of India, and not always exposed
+            to
+            English-oriented education.
+          </strong>
+        </p>
+        We invite them to narrate stories in their own language that they have heard growing up. We teach them to
+        storyboard and illustrate select stories. These stories are translated by us into English and converted into
+        gorgeously produced books, animated films, and mobile apps.
       </div>
-      <div class="img-grid">
-      <div class="boy"><img src="img/boy.png" height="200px"></div>
-      <div class="man"><img src="img/man.png" height="200px"></div>
-      <div class="lady"><img src="img/lady.png" height="500px"></div>
+    </div>
+    <img class="bg-img" src="./assets/img/bg-1920-2.jpg" />
+  </div>
+  <div id="logo-section">
+    <div id="logo-text-wrapper" class="text-wrapper">
+      <div class="body-text">
+        <!-- Children, teachers and the LeTS team engage in an open exchange of ideas, explore newer
+        ways and kinds of learning through stories, and learn to collaboratively create both
+        content and books. The circle is complete when schools exchange their books with others. -->
+        When the printed books reach the school libraries, the kids are already intimately familiar with the
+        story, narrative and illustration. The English translation is the only newness. So it is
+        that they learn from content that they themselves create!
       </div>
-      <div class="video_intro">
-        <iframe width="1000" height="600" src="https://www.youtube.com/embed/UNWIefwtJNI?rel=0&amp;controls=0&amp;autoplay=1&amp;loop=1&amp;modestbranding=1" frameborder="0" allow="accelerometer; clipboard-write; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <img class="bg-img" src="./assets/img/bg-1920-3-1.jpg" />
+  </div>
+
+  <div> id="author-section"
+    <div id="author-text-wrapper" class="text-wrapper">
+      <h2 id="our-authors"> Meet Our Authors</h2>
+    </div>
+    <img class="bg-img" src="./assets/img/bg-1920-3-2.jpg" />
+  </div>
+  <div id="books-section">
+    <div id="books-text-wrapper" class="text-wrapper">
+      <h2 id="our-books"> Our Books</h2>
+      <div class="body-text">
+        <p>
+          Kids love these books. The rich, thick paper, the saturated colours, and the
+          stories that seem both strange and familiar, are <emph>theirs</emph>. It is their names on the book jacket
+          and crowding the credits page.
+        </p>
+
+        <p>Their eyes and minds become sensitized to quality production of their own work, so it is not just words,
+          but worlds they can create anew.</p>
       </div>
-  </article>
-  <footer id="pageFooter">Footer</footer>
+    </div>
+    <img class="bg-img" src="./assets/img/bg-1920-4.jpg" />
+  </div>
+  <div>
+    <img class="bg-img" src="./assets/img/bg-1920-5.jpg" />
+  </div>
+  <div>
+    <img class="bg-img" src="./assets/img/bg-1920-6.jpg" />
+  </div>
 </body>
+
+</html>
