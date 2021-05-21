@@ -24,11 +24,11 @@ body > div {
 #intro-text-wrapper {
   width: 45%; 
   max-width: 45%;
-  height: 85%;
-  max-height: 85%;
+  height: 75%;
+  max-height: 75%;
   color: rgb(56, 63, 57);
   left: 55%;
-  top: 15%;
+  top: 25%;
 }
 
 
@@ -51,7 +51,7 @@ body > div {
   max-height: 60%;
   color: rgb(56, 63, 57);
   left: 60%;
-  top: 30%;
+  top: 40%;
 }
 
 h2 {
@@ -86,7 +86,9 @@ h2 {
 
 /* class common to all text wrappers */
 .text-wrapper {
-  font-size: calc(12px + ((1vw - 3.2px) * 0.5));
+  font-size: calc(9px + ((1vw - 3.2px) * 0.5));
+  hyphens: auto;
+  -webkit-hyphens: auto;
   font-family: 'Hepta Slab', serif;
   line-height: 150%;
   z-index: 2;
@@ -102,7 +104,7 @@ h2 {
   width: 100%;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
 .text-wrapper {
   font-size: 8px;
 }
