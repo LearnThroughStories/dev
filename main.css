@@ -1,0 +1,133 @@
+body{
+    background-image: url("img/bg.jpg");
+    background-size: cover;
+}
+
+/*navbar*/
+
+#navbar {
+    display: grid;
+    min-height: 100px;
+    grid-auto-flow: column;
+    grid-gap: 2.5em;
+    padding: 0 40px;
+    font-family: 'Hepta Slab', serif;
+  }
+  
+  #logo {
+    display: grid;
+    justify-content: start;
+    align-content: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+  }
+  
+  .logo span {
+    color: #0474bc;
+  }
+  
+  #links {
+    display: grid;
+    justify-content: right;
+    align-content: center;
+    grid-auto-flow: column;
+    grid-gap: 1.5em;
+    font-family: 'Hepta Slab', serif;
+  }
+  
+  #links a {
+    text-decoration: none;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  #links a:hover {
+    color: #0474bc;
+  }
+  
+  /* =======================
+  ******* Mobile Menu ******
+  ========================*/
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #fff;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  a {
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  /* Mobile to Tablet  */
+  @media (min-width: 320px) and (max-width: 767px) {
+    #links,
+    .mobile-menu {
+      display: none;
+    }
+    #logo {
+      display: inline-grid;
+      grid-template-columns: auto auto;
+      grid-gap: 70px;
+    }
+    body{
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+  }
+  
+  /* Tablet to Desktop */
+  @media (min-width: 768px) {
+    .mobile-btn {
+      display: none;
+    }
+  }
+  
+ .intro_text{
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     padding-top: 800px;
+ }
+
+ .authors{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 300px;
+}
+
+.books{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 1000px;
+}
