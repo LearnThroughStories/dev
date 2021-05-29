@@ -208,7 +208,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: calc(12px + ((1vw - 3.2px) * 0.5));
+  font-size: calc(10px + ((1vw - 3.2px) * 0.5));
   hyphens: auto;
   -webkit-hyphens: auto;
   font-family: 'Hepta Slab', serif;
