@@ -160,6 +160,10 @@ a {
 .body-text p {
   margin-bottom: 1rem;
 }
+.body-text p:last-child {
+  margin-bottom: 0rem;
+}
+
 
 #logo-text-wrapper {
   width: 40%; 
@@ -177,8 +181,8 @@ h2 {
 #books-text-wrapper {
   width: 30%; 
   max-width: 30%;
-  height: 65%;
-  max-height: 65%;
+  height: 70%;
+  max-height: 70%;
   color: rgb(56, 63, 57);
   left: 30%;
   top: 25%;
@@ -194,7 +198,7 @@ h2 {
 }
 
 #our-authors {
-  font-size: 1.3em;
+  font-size: 1.5em;
   font-weight: bold;
 }
 
@@ -204,7 +208,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + ((1vw - 3.2px) * 0.5));
+  font-size: calc(12px + ((1vw - 3.2px) * 0.5));
   hyphens: auto;
   -webkit-hyphens: auto;
   font-family: 'Hepta Slab', serif;
@@ -229,3 +233,29 @@ h2 {
    width: 100%;
 }
 
+#gallery-img-container {
+  display: flex;
+  overflow: scroll;
+  flex-direction: row;
+  position: absolute;
+  height: 65%;
+  width: 100%;
+  position: absolute;
+  top: 20%;
+}
+
+.gallery-img {
+  height: 100%;
+  width: auto;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.gallery-img img{
+  border-radius: 5px;
+  border: 1px solid grey;
+  height: 100%;
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+}
