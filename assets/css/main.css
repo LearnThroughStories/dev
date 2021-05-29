@@ -7,6 +7,7 @@
 
 body {
   max-width: 1200px;
+  width: 100vw;
   margin-left: auto;
   margin-right:auto;
   text-align: center;
@@ -21,6 +22,121 @@ body > div {
   position: relative;
 }
 
+/* Menu begin */
+#navbar {
+  width: 95%;
+  font-size: calc(9px + ((1vw - 3px) * 0.5));
+  z-index: 3; /* Above text blocks if we want retractable menus*/
+  display: flex;
+  min-height: 50px;
+  height: 80px;
+  font-family: 'Hepta Slab', serif;
+  padding-left: 10px; 
+  padding-right: 10px;
+  position: absolute;
+  top: 20px;
+}
+
+#logo {
+  margin-left: 5%;
+  margin-right: auto;
+  height: 100%;
+}
+
+#logo > img {
+  max-width: 100%;
+  width: auto;
+  max-height: 100%;
+  /* object-fit: contain; */
+}
+
+#links {
+  display: grid;
+  justify-content: right;
+  align-content: center;
+  grid-auto-flow: column;
+  grid-gap: 1.5em;
+  font-family: 'Hepta Slab', serif;
+}
+
+#links a {
+  text-decoration: none;
+  color: rgb(122, 116, 116);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#links a:hover {
+  color: #cf0808;
+}
+
+/* =======================
+******* Mobile Menu ******
+========================*/
+/* .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #fff;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+} */
+
+a {
+  font-family: "Hepta Slab", sans-serif;
+}
+
+/* Mobile to Tablet  */
+/* @media (min-width: 320px) and (max-width: 767px) {
+  #links,
+  .mobile-menu {
+    display: none;
+  }
+  #logo {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    grid-gap: 70px;
+  }
+  body{
+      background-size: contain;
+      background-repeat: no-repeat;
+  }
+} */
+
+/* Tablet to Desktop */
+@media (min-width: 768px) {
+  .mobile-btn {
+    display: none;
+  }
+}
+
+
+/* Menu end */
 #intro-text-wrapper {
   width: 45%; 
   max-width: 45%;
@@ -28,7 +144,7 @@ body > div {
   max-height: 75%;
   color: rgb(56, 63, 57);
   left: 55%;
-  top: 25%;
+  top: 75%;
 }
 
 
@@ -86,7 +202,7 @@ h2 {
 
 /* class common to all text wrappers */
 .text-wrapper {
-  font-size: calc(9px + ((1vw - 3.2px) * 0.5));
+  font-size: calc(10px + ((1vw - 3.2px) * 0.5));
   hyphens: auto;
   -webkit-hyphens: auto;
   font-family: 'Hepta Slab', serif;
@@ -98,14 +214,15 @@ h2 {
   overflow: scroll;
 }
 
-.bg-img {
-  /* for seeing the splits between the background images */
-  /* margin-bottom: 10px; */
-  width: 100%;
+@media screen and (max-width: 750px) {
+  .text-wrapper {
+    font-size: 8px;
+  }
 }
 
-@media screen and (max-width: 750px) {
-.text-wrapper {
-  font-size: 8px;
+
+.bg-img {
+   /*margin-bottom: 10px;  This is for debugging, for seeing the splits between the background images*/
+   width: 100%;
 }
-}
+
