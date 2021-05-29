@@ -9,7 +9,9 @@ body {
   max-width: 1200px;
   width: 100vw;
   margin-left: auto;
-  margin-right:auto;
+  margin-right: auto;
+  padding-left: 5px;
+  padding-right: 5px;
   text-align: center;
   position: relative;
 }
@@ -135,18 +137,17 @@ a {
   }
 }
 
-
 /* Menu end */
+
 #intro-text-wrapper {
-  width: 45%; 
+  width: 45%;
   max-width: 45%;
-  height: 75%;
+  height: 38%;
   max-height: 75%;
   color: rgb(56, 63, 57);
   left: 55%;
-  top: 75%;
+  top: 62%;
 }
-
 
 .body-text {
   width: 100%;
@@ -163,11 +164,10 @@ a {
 #logo-text-wrapper {
   width: 40%; 
   max-width: 40%;
-  height: 60%;
-  max-height: 60%;
+  top: 0%;
+  height: 100%;
   color: rgb(56, 63, 57);
   left: 60%;
-  top: 40%;
 }
 
 h2 {
@@ -187,8 +187,7 @@ h2 {
 #author-text-wrapper {
   width: 50%; 
   max-width: 50%;
-  height: 70%;
-  max-height: 70%;
+  height: 10%;
   color: rgb(56, 63, 57);
   left: 60%;
   top: 5%;
@@ -202,6 +201,9 @@ h2 {
 
 /* class common to all text wrappers */
 .text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-size: calc(10px + ((1vw - 3.2px) * 0.5));
   hyphens: auto;
   -webkit-hyphens: auto;
@@ -212,6 +214,7 @@ h2 {
   padding: 20px;
   position: absolute;
   overflow: scroll;
+
 }
 
 @media screen and (max-width: 750px) {
