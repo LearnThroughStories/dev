@@ -181,11 +181,11 @@ h2 {
 #books-text-wrapper {
   width: 30%;
   max-width: 30%;
-  height: 70%;
+  height: 80%;
   max-height: 70%;
   color: rgb(56, 63, 57);
   left: 30%;
-  top: 25%;
+  top: 20%;
 }
 
 #author-text-wrapper {
@@ -193,8 +193,8 @@ h2 {
   max-width: 50%;
   height: 10%;
   color: rgb(56, 63, 57);
-  left: 60%;
-  top: 5%;
+  left: 50%;
+  top: 15%;
 }
 
 #our-authors {
@@ -208,8 +208,8 @@ h2 {
   flex-direction: column;
   justify-content: center;
   font-size: calc(10px + ((1vw - 3.2px) * 0.5));
-  hyphens: auto;
-  -webkit-hyphens: auto;
+  /* hyphens: auto;
+  -webkit-hyphens: auto; */
   font-family: "Hepta Slab", serif;
   line-height: 150%;
   z-index: 2;

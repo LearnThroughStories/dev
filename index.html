@@ -24,16 +24,15 @@
         <a href="#about">About Us</a>
       </div>
     </div>
-    
+
     <div id="intro-text-wrapper" class="text-wrapper">
       <div class="body-text">
-        <p>The LeTS (Learn Through Stories) project is an initiative of IDC School of Design, IIT Bombay.</p>
+        <p>The LeTS (Learn Through Stories) Foundation is a not-for-profit educational venture that grew out of IDC
+          School of Design, IIT Bombay.</p>
         <p>
-          <strong>
-            It is a collaboration between illustrators, authors, animators, some younger than fifteen and others,
-            design professionals. The kids are from village schools of India, often not exposed to
-            English-oriented education.
-          </strong>
+          It is a collaboration between design professionals and young students from far-flung parts of India. Students
+          bring us stories that they have heard growing up. </p>
+        <p>Together, we create books.
         </p>
       </div>
     </div>
@@ -42,15 +41,10 @@
   <div id="logo-section">
     <div id="logo-text-wrapper" class="text-wrapper">
       <div class="body-text">
-        They narrate in their own language stories that they have heard growing up. We teach them
-        storyboarding and illustration and book design. We translate their stories into English,
-        then transform them into gorgeously produced books, animated films, and mobile apps.
-        <!-- Children, teachers and the LeTS team engage in an open exchange of ideas, explore newer
-        ways and kinds of learning through stories, and learn to collaboratively create both
-        content and books. The circle is complete when schools exchange their books with others. -->
-        <!-- When the printed books reach the school libraries, the kids are already intimately familiar with the
-        story, narrative and illustration. The English translation is the only newness. So it is
-        that they learn from content that they themselves create! -->
+        We teach them storyboarding, illustration and book design through four- to five-day workshops that bring their
+        stories to life. We translate these stories to English, which then become the aid to learning the language. The
+        act of producing the book fundamentally changes learners and their relationship with learning. 
+
       </div>
     </div>
     <img class="bg-img" src="./assets/img/bg-1200-2.jpg" />
@@ -67,7 +61,7 @@
       <h2 id="our-books"> Our Books</h2>
       <div class="body-text">
         <p>
-          Kids love these books. The rich, thick paper, the saturated colours, and the
+          Kids love these gorgeously produced books. The rich, thick paper, the saturated colours, and the
           stories that seem both strange and familiar, are <emph>theirs</emph>. It is their names on the book jacket
           and crowding the credits page.
         </p>
@@ -81,20 +75,20 @@
   </div>
   <div id="gallery-section">
     <div id="gallery-img-container">
-      <img class="gallery-img" src="assets/img/gallery/thumb/YoungIllustrator_Khun_3.jpg"/>
-      <img class="gallery-img" src="assets/img/gallery/thumb/KuluValley_3.jpg"/>
-      <img class="gallery-img" src="assets/img/gallery/thumb/TeachingAndTesting_GramMangalAina_1.jpg"/>
-      <img class="gallery-img" src="assets/img/gallery/thumb/FlyingFish_1.jpg"/>
-      <img class="gallery-img" src="assets/img/gallery/thumb/WallPainting_Khun_2.jpg"/>
-      <img class="gallery-img" src="assets/img/gallery/thumb/Artwork_FoundMaterial_6.jpg"/>
-      <img class="gallery-img" src="assets/img/gallery/thumb/YoungIllustrator_Khun_2.jpg"/>
-      <img class="gallery-img" src="assets/img/gallery/thumb/Artwork_4.jpg"/>
-      <img class="gallery-img" src="assets/img/gallery/thumb/Bookbinding_Kuppam_3.jpg"/>
-      <img class="gallery-img" src="assets/img/gallery/thumb/CleverKalyani_4.jpg"/>
-      <img class="gallery-img" src="assets/img/gallery/thumb/Artworkshop_GroupLearning_2.jpg"/>
-      <img class="gallery-img" src="assets/img/gallery/thumb/YoungIllustrator_Khun_1.jpg"/>
-      <img class="gallery-img" src="assets/img/gallery/thumb/Artwork_1.jpg"/>
-      <img class="gallery-img" src="assets/img/gallery/thumb/TeacherTrainingWorkshop_3.jpg"/>
+      <img class="gallery-img" src="assets/img/gallery/thumb/YoungIllustrator_Khun_3.jpg" />
+      <img class="gallery-img" src="assets/img/gallery/thumb/KuluValley_3.jpg" />
+      <img class="gallery-img" src="assets/img/gallery/thumb/TeachingAndTesting_GramMangalAina_1.jpg" />
+      <img class="gallery-img" src="assets/img/gallery/thumb/FlyingFish_1.jpg" />
+      <img class="gallery-img" src="assets/img/gallery/thumb/WallPainting_Khun_2.jpg" />
+      <img class="gallery-img" src="assets/img/gallery/thumb/Artwork_FoundMaterial_6.jpg" />
+      <img class="gallery-img" src="assets/img/gallery/thumb/YoungIllustrator_Khun_2.jpg" />
+      <img class="gallery-img" src="assets/img/gallery/thumb/Artwork_4.jpg" />
+      <img class="gallery-img" src="assets/img/gallery/thumb/Bookbinding_Kuppam_3.jpg" />
+      <img class="gallery-img" src="assets/img/gallery/thumb/CleverKalyani_4.jpg" />
+      <img class="gallery-img" src="assets/img/gallery/thumb/Artworkshop_GroupLearning_2.jpg" />
+      <img class="gallery-img" src="assets/img/gallery/thumb/YoungIllustrator_Khun_1.jpg" />
+      <img class="gallery-img" src="assets/img/gallery/thumb/Artwork_1.jpg" />
+      <img class="gallery-img" src="assets/img/gallery/thumb/TeacherTrainingWorkshop_3.jpg" />
     </div>
     <div class="left indicator">&larr;</div>
     <div class="right indicator">&rarr;</div>
@@ -114,14 +108,15 @@
   const imgContainer = gallery.querySelector("#gallery-img-container");
   function showIndicators() {
     window.requestAnimationFrame(() => {
-    leftInd.style.opacity = (imgContainer.scrollLeft == 0) ? "0" : "1";
-    rightInd.style.opacity = ((imgContainer.scrollWidth - imgContainer.scrollLeft) > 
-                        imgContainer.clientWidth) ? "1" : "0";
-    // console.log(leftInd.style.opacity, rightInd.style.opacity);
+      leftInd.style.opacity = (imgContainer.scrollLeft == 0) ? "0" : "1";
+      rightInd.style.opacity = ((imgContainer.scrollWidth - imgContainer.scrollLeft) >
+        imgContainer.clientWidth) ? "1" : "0";
+      // console.log(leftInd.style.opacity, rightInd.style.opacity);
     });
   }
   showIndicators();
   imgContainer.addEventListener('scroll', showIndicators);
   window.addEventListener('resize', showIndicators);
 </script>
+
 </html>
