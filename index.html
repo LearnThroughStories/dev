@@ -95,8 +95,9 @@
       <div class="gallery-img"><img src="assets/img/gallery/thumb/YoungIllustrator_Khun_1.jpg"/></div>
       <div class="gallery-img"><img src="assets/img/gallery/thumb/Artwork_1.jpg"/></div>
       <div class="gallery-img"><img src="assets/img/gallery/thumb/TeacherTrainingWorkshop_3.jpg"/></div>
-
     </div>
+    <div class="left indicator">&larr;</div>
+    <div class="right indicator">&rarr;</div>
     <img class="bg-img" src="./assets/img/bg-1200-5.jpg" />
   </div>
   <div>
@@ -106,5 +107,21 @@
     <img class="bg-img" src="./assets/img/bg-1200-7.jpg" />
   </div>
 </body>
-
+<script>
+  const gallery = document.getElementById('gallery-section');
+  const leftInd = gallery.querySelector(".left");
+  const rightInd = gallery.querySelector(".right");
+  const imgContainer = gallery.querySelector("#gallery-img-container");
+  function showIndicators() {
+    window.requestAnimationFrame(() => {
+    leftInd.style.opacity = (imgContainer.scrollLeft == 0) ? "0" : "1";
+    rightInd.style.opacity = ((imgContainer.scrollWidth - imgContainer.scrollLeft) > 
+                        imgContainer.clientWidth) ? "1" : "0";
+    // console.log(leftInd.style.opacity, rightInd.style.opacity);
+    });
+  }
+  showIndicators();
+  imgContainer.addEventListener('scroll', showIndicators);
+  window.addEventListener('resize', showIndicators);
+</script>
 </html>

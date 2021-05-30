@@ -22,6 +22,7 @@ body > div {
    */
   font-size: 0;
   position: relative;
+  width: 100%;
 }
 
 /* Menu begin */
@@ -32,8 +33,8 @@ body > div {
   display: flex;
   min-height: 50px;
   height: 80px;
-  font-family: 'Hepta Slab', serif;
-  padding-left: 10px; 
+  font-family: "Hepta Slab", serif;
+  padding-left: 10px;
   padding-right: 10px;
   position: absolute;
   top: 20px;
@@ -58,7 +59,7 @@ body > div {
   align-content: center;
   grid-auto-flow: column;
   grid-gap: 1.5em;
-  font-family: 'Hepta Slab', serif;
+  font-family: "Hepta Slab", serif;
 }
 
 #links a {
@@ -164,9 +165,8 @@ a {
   margin-bottom: 0rem;
 }
 
-
 #logo-text-wrapper {
-  width: 40%; 
+  width: 40%;
   max-width: 40%;
   top: 0%;
   height: 100%;
@@ -179,7 +179,7 @@ h2 {
 }
 
 #books-text-wrapper {
-  width: 30%; 
+  width: 30%;
   max-width: 30%;
   height: 70%;
   max-height: 70%;
@@ -189,7 +189,7 @@ h2 {
 }
 
 #author-text-wrapper {
-  width: 50%; 
+  width: 50%;
   max-width: 50%;
   height: 10%;
   color: rgb(56, 63, 57);
@@ -202,7 +202,6 @@ h2 {
   font-weight: bold;
 }
 
-
 /* class common to all text wrappers */
 .text-wrapper {
   display: flex;
@@ -211,14 +210,13 @@ h2 {
   font-size: calc(10px + ((1vw - 3.2px) * 0.5));
   hyphens: auto;
   -webkit-hyphens: auto;
-  font-family: 'Hepta Slab', serif;
+  font-family: "Hepta Slab", serif;
   line-height: 150%;
   z-index: 2;
   text-align: left;
   padding: 20px;
   position: absolute;
   overflow: scroll;
-
 }
 
 @media screen and (max-width: 750px) {
@@ -227,12 +225,14 @@ h2 {
   }
 }
 
-
 .bg-img {
-   /*margin-bottom: 10px;  This is for debugging, for seeing the splits between the background images*/
-   width: 100%;
+  /*margin-bottom: 10px;  This is for debugging, for seeing the splits between the background images*/
+  width: 100%;
 }
 
+#gallery-section {
+  width: 100%;
+}
 #gallery-img-container {
   display: flex;
   overflow: scroll;
@@ -251,11 +251,40 @@ h2 {
   margin-right: 5px;
 }
 
-.gallery-img img{
+.gallery-img img {
   border-radius: 5px;
   border: 1px solid grey;
   height: 100%;
   max-height: 100%;
   width: auto;
   object-fit: contain;
+}
+
+.indicator {
+  padding: 0;
+  margin: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  background: white;
+  height: 50px;
+  width: 50px;
+  top: 45%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+  border-width: 5px;
+  border-radius: 50%;
+  /* border-color: white;
+  border-style: solid; */
+  background-color: rgb(243, 237, 227);
+  color: black;
+}
+
+/* see .indicator for props common to left and right */
+.left {
+  left: 5px;
+}
+.right {
+  right: 5px;
 }
