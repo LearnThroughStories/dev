@@ -267,18 +267,17 @@ h2 {
   position: absolute;
   transition: all 0.2s ease-out;
   background: white;
-  height: 50px;
-  width: 50px;
+  height: 3vw;
+  width: 3vw;
+  font-size: 2.5vw;
   top: 45%;
   text-align: center;
-  line-height: 50px;
-  font-size: 30px;
+  line-height: 2.5vw;
   border-width: 5px;
   border-radius: 50%;
   /* border-color: white;
   border-style: solid; */
   background-color: rgb(243, 237, 227);
-  color: black;
 }
 
 /* see .indicator for props common to left and right */
