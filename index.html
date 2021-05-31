@@ -117,6 +117,23 @@
   showIndicators();
   imgContainer.addEventListener('scroll', showIndicators);
   window.addEventListener('resize', showIndicators);
-</script>
+
+  // Workaround for stupid Safari bugs .. .requires reload sometimes on resizing, otherwise
+  // some of the responsive elements don't resize. For example, fontsize.
+  var isSafari = navigator.userAgent.match("Safari");
+  var resizeTimer; 
+  if (isSafari) {
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function() {
+        window.location.reload();
+        console.log("RELOADED");
+      }, 250);
+    });
+  }
+            
+
+
+  </script>
 
 </html>
