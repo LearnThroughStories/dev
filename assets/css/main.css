@@ -140,15 +140,6 @@ a {
 
 /* Menu end */
 
-#intro-text-wrapper {
-  width: 45%;
-  /* max-width: 45%; */
-  height: 40%;
-  color: rgb(56, 63, 57);
-  left: 55%;
-  top: 65%;
-}
-
 .body-text {
   width: 100%;
   /* font-weight: 500; */
@@ -164,49 +155,6 @@ a {
   margin-bottom: 0rem;
 }
 
-#logo-text-wrapper {
-  width: 40%;
-  max-width: 40%;
-  top: 25%;
-  height: 70%;
-  color: rgb(56, 63, 57);
-  left: 60%;
-}
-
-h2 {
-  margin-bottom: 20px;
-}
-
-#books-text-wrapper {
-  width: 30%;
-  max-width: 30%;
-  height: 80%;
-  max-height: 70%;
-  color: rgb(56, 63, 57);
-  left: 32%;
-  top: 20%;
-}
-
-#book-sample {
-  top:86%;
-  left: 75%;
-  /* font-size: 8px; */
-}
-
-#author-text-wrapper {
-  width: 50%;
-  max-width: 50%;
-  height: 10%;
-  color: rgb(56, 63, 57);
-  left: 50%;
-  top: 15%;
-}
-
-#our-authors {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
 /* class common to all text wrappers */
 .text-wrapper {
   font-size: calc(9px + ((1vw - 3.2px) * 0.5));
@@ -219,6 +167,79 @@ h2 {
   overflow: scroll;
 }
 
+#intro-text-wrapper {
+  width: 45%;
+  height: 14%;
+  color: rgb(56, 63, 57);
+  left: 55%;
+  top: 35%;
+}
+
+
+#logo-text-wrapper {
+  width: 40%;
+  top: 55%;
+  height: 10%;
+  color: rgb(56, 63, 57);
+  left: 60%;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+#author-text-wrapper {
+  width: 50%;
+  height: 10%;
+  color: rgb(56, 63, 57);
+  left: 46%;
+  top: 77%;
+}
+#our-authors {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+
+#books-text-wrapper {
+  width: 28%;
+  height: 15%;
+  color: rgb(56, 63, 57);
+  left: 32%;
+  top: 10%;
+}
+
+#book-sample {
+  top:24%;
+  left: 65%;
+  /* font-size: 8px; */
+}
+
+#films-text-wrapper {
+  width: 38%;
+  height: 9%;
+  color: rgb(56, 63, 57);
+  left: 45%;
+  top: 28%;
+}
+
+#apps-text-wrapper {
+  width: 40%;
+  height: 7%;
+  color: rgb(56, 63, 57);
+  left: 52%;
+  top: 53%;
+}
+
+#other-sub-text-wrapper {
+  width: 30%;
+  height: 3%;
+  color: rgb(56, 63, 57);
+  left: 52%;
+  top: 62%;
+}
+
+
 @media screen and (max-width: 750px) {
   .text-wrapper {
     font-size: 8px;
@@ -230,55 +251,6 @@ h2 {
   width: 100%;
 }
 
-#gallery-section {
-  width: 100%;
-}
-#gallery-img-container {
-  display: flex;
-  overflow: scroll;
-  flex-direction: row;
-  position: absolute;
-  height: 65%;
-  width: 100%;
-  position: absolute;
-  top: 20%;
-}
-
-.gallery-img {
-  padding: 0;
-  margin-left: 10px;
-  border-radius: 10px;
-  height: 100%;
-  max-height: 100%;
-  width: auto;
-}
-
-.indicator {
-  padding: 0;
-  margin: 0;
-  pointer-events: none;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  background: white;
-  height: 3vw;
-  width: 3vw;
-  font-size: 2vw;
-  top: 45%;
-  text-align: center;
-  line-height: 2.8vw;
-  border-width: 5px;
-  border-radius: 50%;
-  background-color: rgb(243, 237, 227);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* see .indicator for props common to left and right */
-.left {
-  left: 5px;
-}
-.right {
-  right: 5px;
-}
 
 #book-open {
   position: fixed; 
