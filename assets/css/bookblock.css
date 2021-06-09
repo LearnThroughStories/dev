@@ -1,8 +1,6 @@
 
 
 .bb-page {
-	width: 100%;
-	height: 100%;
 	position: absolute;
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
@@ -11,7 +9,7 @@
 
 }
 
-.bb-page img {
+img {
 	width: 100%;
 	height: 100%;
 	/* object-fit: contain; */
@@ -168,13 +166,6 @@
 	/* background: #fff; */
 
 }
-
-.bb-item img {
-	width: 100%;
-	height: 100%;
-	/* object-fit: contain; */
-}
-
 
 /* No JS */
 .no-js .bb-bookblock, 
