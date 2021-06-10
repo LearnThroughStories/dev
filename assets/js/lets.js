@@ -37,10 +37,10 @@ function Page() {
         speed: 300,
         shadowSides: 0.8,
         shadowFlip: 0.7,
-        onEndFlip: playAudio,
+        // onEndFlip: playAudio,
       });
       initEvents();
-      playAudio(0, 0, false); // Cover page
+      // playAudio(0, 0, false); // Cover page
     },
     initEvents = function () {
       var $slides = config.$bookBlock.children();
