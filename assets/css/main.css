@@ -149,7 +149,7 @@ a {
 }
 
 .body-text p {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 .body-text p:last-child {
   margin-bottom: 0rem;
@@ -157,12 +157,12 @@ a {
 
 /* class common to all text wrappers */
 .text-wrapper {
-  font-size: calc(9px + ((1vw - 3.2px) * 0.5));
+  font-size: calc(14px + ((1vw - 3.2px) * 0.5));
   font-family: "Hepta Slab", serif;
   line-height: 160%;
   z-index: 2;
   text-align: left;
-  padding-right: 20px;
+  padding-right: 10px;
   position: absolute;
   overflow: scroll;
 }
@@ -171,7 +171,7 @@ a {
   width: 45%;
   height: 14%;
   color: rgb(56, 63, 57);
-  left: 55%;
+  left: 53%;
   top: 35%;
 }
 
@@ -179,13 +179,13 @@ a {
 #logo-text-wrapper {
   width: 40%;
   top: 55%;
-  height: 10%;
+  height: 14%;
   color: rgb(56, 63, 57);
   left: 60%;
 }
 
 h2 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 #author-text-wrapper {
@@ -216,10 +216,10 @@ h2 {
 }
 
 #films-text-wrapper {
-  width: 38%;
+  width: 50%;
   height: 9%;
   color: rgb(56, 63, 57);
-  left: 45%;
+  left: 41%;
   top: 28%;
 }
 
@@ -232,11 +232,11 @@ h2 {
 }
 
 #other-sub-text-wrapper {
-  width: 30%;
-  height: 3%;
+  width: 53%;
+  height: 4%;
   color: rgb(56, 63, 57);
-  left: 52%;
-  top: 62%;
+  left: 31%;
+  top: 61.5%;
 }
 
 
