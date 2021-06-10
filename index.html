@@ -128,6 +128,7 @@
     return Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
 
   }
+
   function openBook() {
     var book_open = document.getElementById("book-open");
     var bb_bookblock = document.getElementById("bb-bookblock");
@@ -138,14 +139,16 @@
     } else {
       bb_bookblock.classList.add("bb-vh");
     }
-    Page().init("book-sample");
+    var page = Page();
+    page.init("book-sample");
     var book_close = document.getElementById("book-close");
-    book_close.onclick = closeBook;
+    book_close.onclick = () => {closeBook(page);}
   }
   
-  function closeBook() {
+  function closeBook(page) {
     var book_open = document.getElementById("book-open");
     book_open.style.display = "none";
+    page.close();
   }
 </script>
 

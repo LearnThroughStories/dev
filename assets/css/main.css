@@ -157,7 +157,7 @@ a {
 
 /* class common to all text wrappers */
 .text-wrapper {
-  font-size: calc(14px + ((1vw - 3.2px) * 0.5));
+  font-size: calc(12px + ((1vw - 3.2px) * 0.5));
   font-family: "Hepta Slab", serif;
   line-height: 160%;
   z-index: 2;
@@ -205,7 +205,7 @@ h2 {
   width: 28%;
   height: 15%;
   color: rgb(56, 63, 57);
-  left: 32%;
+  left: 31%;
   top: 10%;
 }
 

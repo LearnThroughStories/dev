@@ -15,9 +15,7 @@ function Page() {
     url = "assets/audio/" + url + ".mp3";
     var au = new Audio(url);
     au.addEventListener("canplaythrough", (event) => {
-      if (oldau) {
-        oldau.pause();
-      }
+      stopAudio();
       au.play()
         .then(function () {
           oldau = au;
@@ -30,6 +28,13 @@ function Page() {
         });
     });
   }; // playAudio
+
+  var stopAudio =function() {
+    if (oldau) {
+      oldau.pause();
+      oldau = null;
+    }
+  }
 
   var init = function (bookname) {
       config.$bookName = bookname;
@@ -74,8 +79,12 @@ function Page() {
         }
       });
     };
-
-  return { init: init };
+    
+  var close = function() {
+    stopAudio();
+    config = null;
+  }
+  return { init: init, close: close};
 }
 
 window.Page = Page;
