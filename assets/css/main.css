@@ -16,7 +16,7 @@ body {
   position: relative;
 }
 
-body > div {
+body > .section {
   /* HTML elements always have some text white space between them because they were meant for text.
     Remove it by setting font size to zero.
    */
