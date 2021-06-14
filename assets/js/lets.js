@@ -29,12 +29,12 @@ function Page() {
     });
   }; // playAudio
 
-  var stopAudio =function() {
+  var stopAudio = function () {
     if (oldau) {
       oldau.pause();
       oldau = null;
     }
-  }
+  };
 
   var init = function (bookname) {
       config.$bookName = bookname;
@@ -79,12 +79,39 @@ function Page() {
         }
       });
     };
-    
-  var close = function() {
+
+  var close = function () {
     stopAudio();
     config = null;
-  }
-  return { init: init, close: close};
+  };
+  return { init: init, close: close };
 }
 
 window.Page = Page;
+
+// Scroll support. For all text-wrappers, add a "shadow" class
+// that covers it, and then turn its bottom shadow on if
+// there is more content. This is to compensate for the 
+// fact that modern browsers don't show scroll bars, so some
+// visual indication is necessary.
+
+function setShadows(event) {
+  let t = event.target;
+  if (t.scrollHeight - t.scrollTop > t.clientHeight) {
+    // console.log("Adding bottom")
+    t.classList.add("at-bottom");
+  } else {
+    t.classList.remove("at-bottom");
+  }
+}
+
+$('<div class="more-text shadow-bottom" aria-hidden="true"></div>')
+  .insertAfter(".body-text");
+$(".text-wrapper").each(function(i, tw) {
+  console.log("Added");
+  setShadows({ target: tw }); // on loading.
+  tw.addEventListener("scroll", setShadows);
+  window.addEventListener("resize", () => {
+    setShadows({ target: tw });
+  });
+});
