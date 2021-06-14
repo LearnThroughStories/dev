@@ -101,20 +101,6 @@
     </div>
   </div>
 </body>
-<script>
-  // Workaround for stupid Safari bugs .. .requires reload sometimes on resizing, otherwise
-  // some of the responsive elements don't resize. For example, fontsize.
-  var isSafari = navigator.userAgent.match("Safari");
-  var resizeTimer;
-  if (isSafari) {
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(function () {
-        window.location.reload();
-      }, 250);
-    });
-  }
-</script>
 <script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
 <script type="text/javascript" src="assets/js/jquerypp.custom.js"></script>
