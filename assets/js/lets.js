@@ -98,7 +98,7 @@ window.Page = Page;
 
 function addMoreIndicatorIfOverflow(event) {
   let t = event.target;
-  if (t.scrollHeight - t.scrollTop > t.clientHeight) {
+  if (t.clientHeight > 0 && (t.scrollHeight - t.scrollTop > t.clientHeight)) {
     t.classList.add("more-text-indicator");
   } else {
     t.classList.remove("more-text-indicator");
