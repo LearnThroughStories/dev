@@ -89,29 +89,26 @@ function Page() {
 
 window.Page = Page;
 
-// Scroll support. For all text-wrappers, add a "shadow" class
-// that covers it, and then turn its bottom shadow on if
-// there is more content. This is to compensate for the 
-// fact that modern browsers don't show scroll bars, so some
-// visual indication is necessary.
+// Modern browsers don't show scroll bars, so some
+// visual indication is necessary, otherwise the text looks clipped
+// esp on small screens.
+// For all text-wrappers, this indicator is in the form of a 
+// bottom shadow that somewhat obscures the last visible line, which
+// nudge the viewer to scroll down to get it into clear view.
 
-function setShadows(event) {
+function addMoreIndicatorIfOverflow(event) {
   let t = event.target;
   if (t.scrollHeight - t.scrollTop > t.clientHeight) {
-    // console.log("Adding bottom")
-    t.classList.add("at-bottom");
+    t.classList.add("more-text-indicator");
   } else {
-    t.classList.remove("at-bottom");
+    t.classList.remove("more-text-indicator");
   }
 }
 
-$('<div class="more-text shadow-bottom" aria-hidden="true"></div>')
-  .insertAfter(".body-text");
 $(".text-wrapper").each(function(i, tw) {
-  console.log("Added");
-  setShadows({ target: tw }); // on loading.
-  tw.addEventListener("scroll", setShadows);
+  addMoreIndicatorIfOverflow({ target: tw }); // on loading.
+  tw.addEventListener("scroll", addMoreIndicatorIfOverflow);
   window.addEventListener("resize", () => {
-    setShadows({ target: tw });
+    addMoreIndicatorIfOverflow({ target: tw });
   });
 });
