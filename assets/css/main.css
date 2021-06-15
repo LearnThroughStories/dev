@@ -232,11 +232,11 @@ h2 {
   left: 53%;
   top: 77%;
 }
+
 #our-authors {
   font-size: 1.5em;
   font-weight: bold;
 }
-
 
 #books-text-wrapper {
   width: 28%;
@@ -380,4 +380,23 @@ h2 {
 
 .more-text-indicator {
   /* box-shadow: 0 -1em 1em -1em rgb(90, 90, 52) inset; */
+}
+
+#follow {
+  top:90%;
+  left: 50%;
+}
+
+#social {
+}
+
+.fa {
+  font-size: 20px;
+  color: grey;
+  background:rgba(0, 0, 0, 0.1);
+}
+
+.nGY2 .toolbar .label .title {
+  font-family: "Hepta Slab", serif;
+  font-size: calc(max(1.3vw,1.3vh));  
 }

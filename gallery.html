@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LeTS: Learn Through Stories</title>
-    <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="./assets/css/bookblock.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@500;700&display=swap" rel="stylesheet">
@@ -15,6 +14,7 @@
         type="text/css">
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/main.css" />
 
 </head>
 
@@ -30,7 +30,7 @@
             <a href="#about">About Us</a>
         </div>
     </div>
-    <div id="nanogallery" style="margin-top:100px; font-size: 30px; color: white;">
+    <div id="nanogallery" style="margin-top:100px; font-size: 12px; font-family: 'Hepta Slab'; color: white;">
     </div>
 </body>
 <script>
@@ -43,809 +43,676 @@
             thumbnailDisplayOrder: 'random',
             thumbnailHeight: '200', thumbnailWidth: '200',
             displayTitle: false,
-            displayDescription: true,
-            descrptionFontSize: "1em",
+            titleFontSize: "2em",
+            imageTransition: 'slideAppear',
+
+            descriptionFontSize: "2em",
             descriptionMultiLine: true,
-            viewerToolbar: {
-                display: true,
-                position: "top",
-                standard: 'label',
-            },
-            // viewerTools: {
-            //     topLeft: 'pageCounter',
-            //     topRight: 'playPauseButton, zoomButton, fullscreenButton, closeButton'
-            // },
 
             items: [
-                
+
             {  
             src: "large/Alka_AtConference_UKIndia.jpg", 
             srct: "thumb/Alka_AtConference_UKIndia.jpg", 
-            description: `Prof. Alka Hingorani presenting LeTS at the UK-India "Future Tech Festival", New Delhi, Dec 2018`, 
+            title: `Prof. Alka Hingorani presenting LeTS at the UK-India "Future Tech Festival", New Delhi, Dec 2018`, 
             height: 1024, width: 683, 
             imgtWidth: 400, imgtHeight: 266,
-            tags: "people lets"
             },
 
             {  
             src: "large/Alka_GSSSKhun_2014.jpg", 
             srct: "thumb/Alka_GSSSKhun_2014.jpg", 
-            description: `Prof. Alka Hingorani engaging students at the GSS School, Khun, HP.`, 
+            title: `Prof. Alka Hingorani engaging students at the GSS School, Khun, Himachal Pradesh.`, 
             height: 1024, width: 653, 
             imgtWidth: 400, imgtHeight: 255,
-            tags: "people lets"
             },
 
             {  
             src: "large/ArtMaterials.jpg", 
             srct: "thumb/ArtMaterials.jpg", 
-            description: ``, 
+            title: ``, 
             height: 1024, width: 675, 
             imgtWidth: 400, imgtHeight: 263,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_Crows_01.jpg", 
             srct: "thumb/Artwork_Crows_01.jpg", 
-            description: `Artwork for animation film "The Hungry Crow"
-Animator`, 
+            title: `Artwork for animation film "The Hungry Crow"`, 
             height: 1024, width: 576, 
             imgtWidth: 400, imgtHeight: 225,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_Crows_02.jpg", 
             srct: "thumb/Artwork_Crows_02.jpg", 
-            description: `Artwork for animation film "The Hungry Crow"`, 
+            title: `Artwork for animation film "The Hungry Crow"`, 
             height: 1024, width: 576, 
             imgtWidth: 400, imgtHeight: 225,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_Crows_03.jpg", 
             srct: "thumb/Artwork_Crows_03.jpg", 
-            description: `Artwork for animation film "The Hungry Crow"`, 
+            title: `Artwork for animation film "The Hungry Crow"`, 
             height: 1024, width: 576, 
             imgtWidth: 400, imgtHeight: 225,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_Fence_03.jpg", 
             srct: "thumb/Artwork_Fence_03.jpg", 
-            description: `Student artwork for "Clever Kalyani".`, 
+            title: `Student artwork for "Clever Kalyani".`, 
             height: 800, width: 800, 
             imgtWidth: 400, imgtHeight: 400,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_Monkeys_01.jpg", 
             srct: "thumb/Artwork_Monkeys_01.jpg", 
-            description: `Artwork by S. Hemavathi (Std 7) for "Crazy Monkey". 2015.  Agastya Intnl Foundation, Kuppam, AP.`, 
+            title: `Artwork by S. Hemavathi (Std 7) for "Crazy Monkey".  Agastya International Foundation, Kuppam, Andhra Pradesh.`, 
             height: 1024, width: 725, 
             imgtWidth: 400, imgtHeight: 283,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_Monster_PencilDrawing_01.jpg", 
             srct: "thumb/Artwork_Monster_PencilDrawing_01.jpg", 
-            description: `Student artwork (Std. 7) for "Monster and the Little Boy". 2015. Gram Mangal School, Dahanu, MH
-Instructor`, 
+            title: `Student artwork (Std. 7) for "Monster and the Little Boy". Gram Mangal School, Dahanu, Maharashtra`, 
             height: 450, width: 800, 
             imgtWidth: 225, imgtHeight: 400,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_Monster.jpg", 
             srct: "thumb/Artwork_Monster.jpg", 
-            description: `Rupesh Vadhav (Std 7). Artwork for "Monster and the Little Boy". 2015. Gram Mangal School, Dahanu, MH
-Instructor`, 
+            title: `Rupesh Vadhav (Std 7). Artwork for "Monster and the Little Boy". Gram Mangal School, Dahanu, Maharashtra`, 
             height: 564, width: 800, 
             imgtWidth: 282, imgtHeight: 400,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_MonsterFace.jpg", 
             srct: "thumb/Artwork_MonsterFace.jpg", 
-            description: `Student artwork (Std. 7) for "Monster and the Little Boy". Gram Mangal School, Dahanu, MH
-Instructor`, 
+            title: `Student artwork (Std. 7) for "Monster and the Little Boy". Gram Mangal School, Dahanu, Maharashtra`, 
             height: 885, width: 800, 
             imgtWidth: 400, imgtHeight: 361,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_Mountains_02.jpg", 
             srct: "thumb/Artwork_Mountains_02.jpg", 
-            description: `Artwork by S. Yamuha (Std 7) for "Monster and the Little Boy". Gram Mangal School, Dahanu, MH`, 
+            title: `Artwork by S. Yamuha (Std 7) for "Monster and the Little Boy". Gram Mangal School, Dahanu, Maharashtra`, 
             height: 1024, width: 725, 
             imgtWidth: 400, imgtHeight: 283,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_Mountains.jpg", 
             srct: "thumb/Artwork_Mountains.jpg", 
-            description: `Student artwork (Std 8-9) for "Rescue from the Claw". KGBV School, Gudupalle, AP.
-Instructors: Sanket Pethkar, Umesh Wagh, IDC, IIT Bombay`, 
+            title: `Student artwork (Std 8-9) for "Rescue from the Claw". KGBV School, Gudupalle, Andhra Pradesh.`, 
             height: 1024, width: 682, 
             imgtWidth: 400, imgtHeight: 266,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_NightSky_05.jpg", 
             srct: "thumb/Artwork_NightSky_05.jpg", 
-            description: `Student artwork. Night Sky.`, 
+            title: `Student artwork. "Night Sky"`, 
             height: 1024, width: 725, 
             imgtWidth: 400, imgtHeight: 283,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_Peacock_FoundMaterial_06.jpg", 
             srct: "thumb/Artwork_Peacock_FoundMaterial_06.jpg", 
-            description: `Found-material artwork for "Rokuroo". KGBV School, Gudupalle, AP
-Instructor: Ruchi Shah, IDC, IIT Bombay`, 
+            title: `Found-material artwork for "Rokuroo". KGBV School, Gudupalle, Andhra Pradesh`, 
             height: 1024, width: 682, 
             imgtWidth: 400, imgtHeight: 266,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_Peacock_FoundMaterial_08.jpg", 
             srct: "thumb/Artwork_Peacock_FoundMaterial_08.jpg", 
-            description: `Found-material artwork for "Rokuroo". KGBV School, Gudupalle, AP
-Instructor: Ruchi Shah, IDC, IIT Bombay`, 
+            title: `Found-material artwork for "Rokuroo". KGBV School, Gudupalle, Andhra Pradesh`, 
             height: 1024, width: 682, 
             imgtWidth: 400, imgtHeight: 266,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_Peacock_FoundMaterial_10.jpg", 
             srct: "thumb/Artwork_Peacock_FoundMaterial_10.jpg", 
-            description: `Found-material artwork for "Rokuroo". T. Lalitha (Std 8), KGBV School, Gudupalle, AP
-Instructor: Ruchi Shah, IDC, IIT Bombay`, 
+            title: `Found-material artwork for "Rokuroo" by T. Lalitha (Std 8), KGBV School, Gudupalle, Andhra Pradesh`, 
             height: 1024, width: 682, 
             imgtWidth: 400, imgtHeight: 266,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_Peacock_FoundMaterial_11.jpg", 
             srct: "thumb/Artwork_Peacock_FoundMaterial_11.jpg", 
-            description: `Found-material artwork for "Rokuroo". KGBV School, Gudupalle, AP
-Instructor: Ruchi Shah, IDC, IIT Bombay`, 
+            title: `Found-material artwork for "Rokuroo". KGBV School, Gudupalle, Andhra Pradesh`, 
             height: 1024, width: 682, 
             imgtWidth: 400, imgtHeight: 266,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_Peacock_FoundMaterial_12.jpg", 
             srct: "thumb/Artwork_Peacock_FoundMaterial_12.jpg", 
-            description: `Found-material artwork for "Rokuroo". KGBV School, Gudupalle, AP
-Instructor: Ruchi Shah, IDC, IIT Bombay`, 
+            title: `Found-material artwork for "Rokuroo". KGBV School, Gudupalle, Andhra Pradesh`, 
             height: 1024, width: 682, 
             imgtWidth: 400, imgtHeight: 266,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_Peacock_FoundMaterial_13.jpg", 
             srct: "thumb/Artwork_Peacock_FoundMaterial_13.jpg", 
-            description: `Found-material artwork for "Rokuroo". KGBV School, Gudupalle, AP
-Instructor: Ruchi Shah, IDC, IIT Bombay`, 
+            title: `Found-material artwork for "Rokuroo". KGBV School, Gudupalle, Andhra Pradesh`, 
             height: 1024, width: 682, 
             imgtWidth: 400, imgtHeight: 266,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_Peacock_FoundMaterial_14.jpg", 
             srct: "thumb/Artwork_Peacock_FoundMaterial_14.jpg", 
-            description: `Found-material artwork for "Rokuroo". K. Chandana (Std 8), KGBV School, Gudupalle, AP
-Instructor: Ruchi Shah, IDC, IIT Bombay`, 
+            title: `Found-material artwork for "Rokuroo" by K. Chandana (Std 8), KGBV School, Gudupalle, Andhra Pradesh`, 
             height: 1024, width: 682, 
             imgtWidth: 400, imgtHeight: 266,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_RiverStones_Aina_01.jpg", 
             srct: "thumb/Artwork_RiverStones_Aina_01.jpg", 
-            description: `River stone artwork. Sagar Vadhav (Std 6), Gram Mangal School, Dahanu, MH.
-Instructor: Sanket Pethkar, IDC, IIT Bombay`, 
+            title: `River stone artwork. Sagar Vadhav (Std 6), Gram Mangal School, Dahanu, Maharashtra.`, 
             height: 496, width: 800, 
             imgtWidth: 248, imgtHeight: 400,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_RiverStones_Aina_02.jpg", 
             srct: "thumb/Artwork_RiverStones_Aina_02.jpg", 
-            description: `River stone artwork. (Std 6) Gram Mangal School, Dahanu, MH.
-Instructor: Sanket Pethkar, IDC, IIT Bombay`, 
+            title: `River stone artwork. (Std 6) Gram Mangal School, Dahanu, Maharashtra.`, 
             height: 495, width: 800, 
             imgtWidth: 247, imgtHeight: 400,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_RiverStones_Aina_03.jpg", 
             srct: "thumb/Artwork_RiverStones_Aina_03.jpg", 
-            description: `River stone artwork. (Std 6) Gram Mangal School, Dahanu, MH.
-Instructor: Sanket Pethkar, IDC, IIT Bombay`, 
+            title: `River stone artwork. (Std 6) Gram Mangal School, Dahanu, Maharashtra.`, 
             height: 403, width: 800, 
             imgtWidth: 201, imgtHeight: 400,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_Rooster_21.jpg", 
             srct: "thumb/Artwork_Rooster_21.jpg", 
-            description: `Found-material artwork for "Rokuroo". (Std 8) KGBV School, Gudupalle, AP
-Instructor: Ruchi Shah, IDC, IIT Bombay`, 
+            title: `Found-material artwork for "Rokuroo". (Std 8) KGBV School, Gudupalle, Andhra Pradesh`, 
             height: 1024, width: 682, 
             imgtWidth: 400, imgtHeight: 266,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_StrangeRainbowCow.jpg", 
             srct: "thumb/Artwork_StrangeRainbowCow.jpg", 
-            description: `Artwork for "Boy and the Calf", Gram Mangal School, Dahanu, MH
-Instructor: Tejashree Ingawale`, 
+            title: `Artwork for "Boy and the Calf", Gram Mangal School, Dahanu, Maharashtra`, 
             height: 1024, width: 723, 
             imgtWidth: 400, imgtHeight: 282,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_Trees_04.jpg", 
             srct: "thumb/Artwork_Trees_04.jpg", 
-            description: `Artwork by Jayauree (Std 7), Agastya Intnl Foundation, Kuppam, AP.`, 
+            title: `Artwork by Jayauree (Std 7), Agastya International Foundation, Kuppam, Andhra Pradesh.`, 
             height: 1024, width: 725, 
             imgtWidth: 400, imgtHeight: 283,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_Trees_05.jpg", 
             srct: "thumb/Artwork_Trees_05.jpg", 
-            description: ``, 
+            title: ``, 
             height: 739, width: 800, 
             imgtWidth: 369, imgtHeight: 400,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_TreeTrunk.jpg", 
             srct: "thumb/Artwork_TreeTrunk.jpg", 
-            description: ``, 
+            title: ``, 
             height: 461, width: 800, 
             imgtWidth: 230, imgtHeight: 400,
-            tags: "art"
             },
 
             {  
             src: "large/Artwork_YoungWoman.jpg", 
             srct: "thumb/Artwork_YoungWoman.jpg", 
-            description: `Artwork for "Maya and Aharika". KGBV School, Gudupalle, AP
-Instructors: Sanket Pethkar & Umesh Wagh, IDC, IIT Bombay`, 
+            title: `Artwork for "Maya and Aharika". KGBV School, Gudupalle, Andhra Pradesh`, 
             height: 1024, width: 723, 
             imgtWidth: 400, imgtHeight: 282,
-            tags: "art"
             },
 
             {  
             src: "large/Artworkshop_GroupLearning_1.jpg", 
             srct: "thumb/Artworkshop_GroupLearning_1.jpg", 
-            description: `Ruchi with students at Gram Mangal School, Dahanu, MH
-Instructor: Ruchi Shah, IDC, IIT Bombay`, 
+            title: `Ruchi with students at Gram Mangal School, Dahanu, Maharashtra`, 
             height: 532, width: 800, 
             imgtWidth: 266, imgtHeight: 400,
-            tags: "people lets"
             },
 
             {  
             src: "large/Artworkshop_GroupLearning_2.jpg", 
             srct: "thumb/Artworkshop_GroupLearning_2.jpg", 
-            description: `Ruchi & Gayathri with students at Gram Mangal School, Dahanu, MH
-Instructor: Ruchi Shah, IDC, IIT Bombay`, 
+            title: `Ruchi & Gayathri with students at Gram Mangal School, Dahanu, Maharashtra`, 
             height: 532, width: 800, 
             imgtWidth: 266, imgtHeight: 400,
-            tags: "people lets"
             },
 
             {  
             src: "large/Artworkshop_GroupLearning_3.jpg", 
             srct: "thumb/Artworkshop_GroupLearning_3.jpg", 
-            description: `Karan with students at GSS School, Khun, HP
-Instructor: Karan Vohra, IDC, IIT Bombay`, 
+            title: `Karan with students at GSS School, Khun, Himachal Pradesh`, 
             height: 1024, width: 640, 
             imgtWidth: 400, imgtHeight: 250,
-            tags: "people lets"
             },
 
             {  
             src: "large/Artworkshop_GroupLearning_4.jpg", 
             srct: "thumb/Artworkshop_GroupLearning_4.jpg", 
-            description: `Pre-proficiency test. Gram Mangal School, Dahanu, MH`, 
+            title: `Pre-proficiency test. Gram Mangal School, Dahanu, Maharashtra`, 
             height: 1024, width: 630, 
             imgtWidth: 400, imgtHeight: 246,
-            tags: "people"
             },
 
             {  
             src: "large/Book_MonsterAndTheLittleBoy_AccordionFold.jpg", 
             srct: "thumb/Book_MonsterAndTheLittleBoy_AccordionFold.jpg", 
-            description: `Box set of "Monster and the Little Boy", with three graded versions`, 
+            title: `Box set of "Monster and the Little Boy", with three graded versions`, 
             height: 1024, width: 682, 
             imgtWidth: 400, imgtHeight: 266,
-            tags: "book"
             },
 
             {  
             src: "large/Bookbinding_Kuppam_1.jpg", 
             srct: "thumb/Bookbinding_Kuppam_1.jpg", 
-            description: `Students binding their own copy of "Maya and Aharika", KGBV School, Gudupalle, AP`, 
+            title: `Students binding their own copy of "Maya and Aharika", KGBV School, Gudupalle, Andhra Pradesh`, 
             height: 713, width: 800, 
             imgtWidth: 356, imgtHeight: 400,
-            tags: "book people"
             },
 
             {  
             src: "large/Bookbinding_Kuppam_2.jpg", 
             srct: "thumb/Bookbinding_Kuppam_2.jpg", 
-            description: `Students binding their own copy of "Maya and Aharika", KGBV School, Gudupalle, AP`, 
+            title: `Students binding their own copy of "Maya and Aharika", KGBV School, Gudupalle, Andhra Pradesh`, 
             height: 1024, width: 720, 
             imgtWidth: 400, imgtHeight: 281,
-            tags: "book people"
             },
 
             {  
             src: "large/Bookbinding_Kuppam_3.jpg", 
             srct: "thumb/Bookbinding_Kuppam_3.jpg", 
-            description: `Safiya Shaikh, students and teachers with copies of "The Flying Chair"
-Instructors: Sanket Pethkar & Umesh Wagh, IDC, IIT Bombay, with teachers from Agastya International Foundation`, 
+            title: `"The Flying Chair" book workshop.`, 
             height: 1024, width: 728, 
             imgtWidth: 400, imgtHeight: 284,
-            tags: "people lets book"
             },
 
             {  
             src: "large/BookSets.jpg", 
             srct: "thumb/BookSets.jpg", 
-            description: `Box sets with graded versions of stories`, 
+            title: `Box sets with graded versions of stories`, 
             height: 1024, width: 768, 
             imgtWidth: 400, imgtHeight: 300,
-            tags: "book"
             },
 
             {  
             src: "large/BoyAndCalf_BookSetAndOpenBook.jpg", 
             srct: "thumb/BoyAndCalf_BookSetAndOpenBook.jpg", 
-            description: `Box set of "Boy and the Calf", with three graded versions
-Designer: Tejashree Ingawale`, 
+            title: `Box set of "Boy and the Calf", with three graded versions`, 
             height: 1024, width: 575, 
             imgtWidth: 400, imgtHeight: 224,
-            tags: "book"
             },
 
             {  
             src: "large/BoyOnBicycle.jpg", 
             srct: "thumb/BoyOnBicycle.jpg", 
-            description: ``, 
+            title: ``, 
             height: 1024, width: 682, 
             imgtWidth: 400, imgtHeight: 266,
-            tags: "people"
             },
 
             {  
             src: "large/BunchOfStudents_Gazebo_GramMangal_1.jpg", 
             srct: "thumb/BunchOfStudents_Gazebo_GramMangal_1.jpg", 
-            description: `Viewing animated shorts on tablets. Gram Mangal School, Dahanu, MH`, 
+            title: `Viewing animated shorts on tablets. Gram Mangal School, Dahanu, Maharashtra`, 
             height: 1024, width: 667, 
             imgtWidth: 400, imgtHeight: 260,
-            tags: "people"
             },
 
             {  
             src: "large/BunchOfStudents_Gazebo_GramMangal_2.jpg", 
             srct: "thumb/BunchOfStudents_Gazebo_GramMangal_2.jpg", 
-            description: `Gram Mangal School, Dahanu, MH`, 
+            title: `Gram Mangal School, Dahanu, Maharashtra`, 
             height: 1024, width: 682, 
             imgtWidth: 400, imgtHeight: 266,
-            tags: "people"
             },
 
             {  
             src: "large/CleverKalyani_1.jpg", 
             srct: "thumb/CleverKalyani_1.jpg", 
-            description: `"Clever Kalyani" by Sanket and students at Agastya Intnl. Foundation, Kuppam, AP
-Designer; Sanket Pethkar, IDC, IIT Bombay`, 
+            title: `"Clever Kalyani" artwork Agastya International Foundation, Kuppam, Andhra Pradesh`, 
             height: 519, width: 800, 
             imgtWidth: 259, imgtHeight: 400,
-            tags: "art"
             },
 
             {  
             src: "large/CleverKalyani_2.jpg", 
             srct: "thumb/CleverKalyani_2.jpg", 
-            description: `"Clever Kalyani" by Sanket and students at Agastya Intnl. Foundation, Kuppam, AP
-Designer; Sanket Pethkar, IDC, IIT Bombay`, 
+            title: `"Clever Kalyani" artwork Agastya International Foundation, Kuppam, Andhra Pradesh`, 
             height: 1022, width: 800, 
             imgtWidth: 400, imgtHeight: 313,
-            tags: "art"
             },
 
             {  
             src: "large/CleverKalyani_3.jpg", 
             srct: "thumb/CleverKalyani_3.jpg", 
-            description: `"Clever Kalyani" by Sanket and students at Agastya Intnl. Foundation, Kuppam, AP
-Designer: Sanket Pethkar, IDC, IIT Bombay`, 
+            title: `"Clever Kalyani" artwork Agastya International Foundation, Kuppam, Andhra Pradesh`, 
             height: 1022, width: 800, 
             imgtWidth: 400, imgtHeight: 313,
-            tags: "art"
             },
 
             {  
             src: "large/CleverKalyani_4.jpg", 
             srct: "thumb/CleverKalyani_4.jpg", 
-            description: `"Clever Kalyani" by Sanket and students at Agastya Intnl. Foundation, Kuppam, AP
-Designer; Sanket Pethkar, IDC, IIT Bombay`, 
+            title: `"Clever Kalyani" artwork Agastya International Foundation, Kuppam, Andhra Pradesh`, 
             height: 1022, width: 800, 
             imgtWidth: 400, imgtHeight: 313,
-            tags: "art"
             },
 
             {  
             src: "large/FishAndFun_Dahanu.jpg", 
             srct: "thumb/FishAndFun_Dahanu.jpg", 
-            description: `Art and Craft workshop. Std 5-6, Gram Mangal School, Dahanu, MH`, 
+            title: `Art and Craft workshop. Std 5-6, Gram Mangal School, Dahanu, Maharashtra`, 
             height: 1024, width: 680, 
             imgtWidth: 400, imgtHeight: 265,
-            tags: "people"
             },
 
             {  
             src: "large/FlyingFish_1.jpg", 
             srct: "thumb/FlyingFish_1.jpg", 
-            description: `Art and Craft workshop. Std 5-6, Gram Mangal School, Dahanu, MH`, 
+            title: `Art and Craft workshop. Std 5-6, Gram Mangal School, Dahanu, Maharashtra`, 
             height: 1024, width: 680, 
             imgtWidth: 400, imgtHeight: 265,
-            tags: "art"
             },
 
             {  
             src: "large/KulluValley_1.jpg", 
             srct: "thumb/KulluValley_1.jpg", 
-            description: `Kullu Valley, near GSS School, Khun. HP`, 
+            title: `Kullu Valley, near GSS School, Khun. Himachal Pradesh`, 
             height: 500, width: 375, 
             imgtWidth: 400, imgtHeight: 300,
-            tags: ""
             },
 
             {  
             src: "large/KulluValley_3.jpg", 
             srct: "thumb/KulluValley_3.jpg", 
-            description: `Kullu Valley, near GSS School, Khun. HP`, 
+            title: `Kullu Valley, near GSS School, Khun. Himachal Pradesh`, 
             height: 1024, width: 680, 
             imgtWidth: 400, imgtHeight: 265,
-            tags: ""
             },
 
             {  
             src: "large/MobileApp_Tactopus_1.jpg", 
             srct: "thumb/MobileApp_Tactopus_1.jpg", 
-            description: `Mobile app reads aloud any page from a LeTS book`, 
+            title: `Mobile app reads aloud any page from a LeTS book`, 
             height: 822, width: 800, 
             imgtWidth: 400, imgtHeight: 389,
-            tags: "book"
             },
 
             {  
             src: "large/OpenBook_2.jpg", 
             srct: "thumb/OpenBook_2.jpg", 
-            description: `A student's copy of "Rescue from the Claws".`, 
+            title: `A student's copy of "Rescue from the Claws".`, 
             height: 1024, width: 728, 
             imgtWidth: 400, imgtHeight: 284,
-            tags: "book"
             },
 
             {  
             src: "large/OpenBook_3.jpg", 
             srct: "thumb/OpenBook_3.jpg", 
-            description: ``, 
+            title: ``, 
             height: 600, width: 800, 
             imgtWidth: 300, imgtHeight: 400,
-            tags: "book"
             },
 
             {  
             src: "large/OpenBook_4.jpg", 
             srct: "thumb/OpenBook_4.jpg", 
-            description: `"Khichdi" book. GSS School, Khun, HP
-Designer: Ruchi Shah, IDC, IIT Bombay`, 
+            title: `"Khichdi" book. GSS School, Khun, Himachal Pradesh`, 
             height: 1024, width: 768, 
             imgtWidth: 400, imgtHeight: 300,
-            tags: "book"
             },
 
             {  
             src: "large/Peeking_1.jpg", 
             srct: "thumb/Peeking_1.jpg", 
-            description: ``, 
+            title: ``, 
             height: 1024, width: 727, 
             imgtWidth: 400, imgtHeight: 283,
-            tags: "people"
             },
 
             {  
             src: "large/Peeking_2.jpg", 
             srct: "thumb/Peeking_2.jpg", 
-            description: ``, 
+            title: ``, 
             height: 517, width: 800, 
             imgtWidth: 258, imgtHeight: 400,
-            tags: "people"
             },
 
             {  
             src: "large/RescueFromTheClaws_Page04.jpg", 
             srct: "thumb/RescueFromTheClaws_Page04.jpg", 
-            description: `Student artwork. "Rescue from the Claws" (Original Telugu Version).`, 
+            title: `Student artwork. "Rescue from the Claws" (Original Telugu Version).`, 
             height: 1024, width: 756, 
             imgtWidth: 400, imgtHeight: 295,
-            tags: "art"
             },
 
             {  
             src: "large/RescueFromTheClaws_Page05.jpg", 
             srct: "thumb/RescueFromTheClaws_Page05.jpg", 
-            description: `Student artwork, page design for "Rescue from the Claws" (Original Telugu Version).`, 
+            title: `Student artwork, page design for "Rescue from the Claws" (Original Telugu Version).`, 
             height: 1024, width: 756, 
             imgtWidth: 400, imgtHeight: 295,
-            tags: "art"
             },
 
             {  
             src: "large/RescueFromTheClaws_Page10.jpg", 
             srct: "thumb/RescueFromTheClaws_Page10.jpg", 
-            description: `Student artwork, page design for "Rescue from the Claws" (Original Telugu Version).`, 
+            title: `Student artwork, page design for "Rescue from the Claws" (Original Telugu Version).`, 
             height: 1024, width: 756, 
             imgtWidth: 400, imgtHeight: 295,
-            tags: "art"
             },
 
             {  
             src: "large/Students_GramMangal_Aina.jpg", 
             srct: "thumb/Students_GramMangal_Aina.jpg", 
-            description: `Gram Mangal School, Dahanu, MH`, 
+            title: `Gram Mangal School, Dahanu, Maharashtra`, 
             height: 1024, width: 540, 
             imgtWidth: 400, imgtHeight: 210,
-            tags: "people"
             },
 
             {  
             src: "large/StudentsInLibrary_03.jpg", 
             srct: "thumb/StudentsInLibrary_03.jpg", 
-            description: `Aarti and teacher with students at Agastya Intnl Foundation, Kuppam, AP`, 
+            title: `Aarti and teacher with students at Agastya International Foundation, Kuppam, Andhra Pradesh`, 
             height: 1024, width: 682, 
             imgtWidth: 400, imgtHeight: 266,
-            tags: "people lets"
             },
 
             {  
             src: "large/TeacherTrainingWorkshop_1.jpg", 
             srct: "thumb/TeacherTrainingWorkshop_1.jpg", 
-            description: `Teacher training workshop. Agastya Intnl Foundation, Kuppam, AP
-Instructors: Sanket Pethkar, Umesh Wagh, Aarti Latkar`, 
+            title: `Teacher training workshop. Agastya International Foundation, Kuppam, Andhra Pradesh`, 
             height: 1024, width: 576, 
             imgtWidth: 400, imgtHeight: 225,
-            tags: "people"
             },
 
             {  
             src: "large/TeacherTrainingWorkshop_2.jpg", 
             srct: "thumb/TeacherTrainingWorkshop_2.jpg", 
-            description: `Teacher training workshop. Agastya Intnl Foundation, Kuppam, AP
-Instructors: Sanket Pethkar, Umesh Wagh, Aarti Latkar`, 
+            title: `Teacher training workshop. Agastya International Foundation, Kuppam, Andhra Pradesh`, 
             height: 1024, width: 576, 
             imgtWidth: 400, imgtHeight: 225,
-            tags: "people"
             },
 
             {  
             src: "large/TeacherTrainingWorkshop_3.jpg", 
             srct: "thumb/TeacherTrainingWorkshop_3.jpg", 
-            description: `Teacher training workshop at IIT Bombay
-Instructors: Sanket Pethkar, Umesh Wagh, Aarti Latkar`, 
+            title: `Teacher training workshop at IIT Bombay`, 
             height: 1024, width: 682, 
             imgtWidth: 400, imgtHeight: 266,
-            tags: "people lets"
             },
 
             {  
             src: "large/TeacherTrainingWorkshop_4.jpg", 
             srct: "thumb/TeacherTrainingWorkshop_4.jpg", 
-            description: `Teacher training workshop. Agastya Intnl Foundation, Kuppam, AP
-Instructors: Sanket Pethkar, Umesh Wagh, Aarti Latkar, IDC, IIT Bombay`, 
+            title: `Teacher training workshop. Agastya International Foundation, Kuppam, Andhra Pradesh`, 
             height: 1024, width: 682, 
             imgtWidth: 400, imgtHeight: 266,
-            tags: "people"
             },
 
             {  
             src: "large/TeachingAndTesting_GramMangalAina_1.jpg", 
             srct: "thumb/TeachingAndTesting_GramMangalAina_1.jpg", 
-            description: `Aarti Latkar testing proficiency levels. Gram Mangal School, Dahanu, MH.
-Instructor: Aarti Latkar IDC, IIT Bombay`, 
+            title: `Aarti Latkar testing proficiency levels. Gram Mangal School, Dahanu, Maharashtra.`, 
             height: 554, width: 800, 
             imgtWidth: 277, imgtHeight: 400,
-            tags: "people lets"
             },
 
             {  
             src: "large/TeachingAndTesting_GramMangalAina_2.jpg", 
             srct: "thumb/TeachingAndTesting_GramMangalAina_2.jpg", 
-            description: `Aarti Latkar testing proficiency levels. Gram Mangal School, Dahanu, MH.
-Instructor: Aarti Latkar IDC, IIT Bombay`, 
+            title: `Aarti Latkar testing proficiency levels. Gram Mangal School, Dahanu, Maharashtra.`, 
             height: 1024, width: 722, 
             imgtWidth: 400, imgtHeight: 282,
-            tags: "people lets"
             },
 
             {  
             src: "large/TeachingAndTesting_GramMangalAina_3.jpg", 
             srct: "thumb/TeachingAndTesting_GramMangalAina_3.jpg", 
-            description: `Listening to stories in English through Animated Shorts. Gram Mangal School, Dahanu, MH.
-Instructors: Aarti Latkar, Ruchi Shah, IDC, IIT Bombay`, 
+            title: `Listening to stories in English through Animated Shorts. Gram Mangal School, Dahanu, Maharashtra.`, 
             height: 574, width: 800, 
             imgtWidth: 287, imgtHeight: 400,
-            tags: "people"
             },
 
             {  
             src: "large/TeachingAndTesting_GramMangalAina_4.jpg", 
             srct: "thumb/TeachingAndTesting_GramMangalAina_4.jpg", 
-            description: `Listening to stories in English through Animated Shorts. Gram Mangal School, Dahanu, MH.
-Instructors: Aarti Latkar, Ruchi Shah, IDC, IIT Bombay`, 
+            title: `Listening to stories in English through Animated Shorts. Gram Mangal School, Dahanu, Maharashtra.`, 
             height: 528, width: 800, 
             imgtWidth: 264, imgtHeight: 400,
-            tags: "people"
             },
 
             {  
             src: "large/TeachingAndTesting_GramMangalAina_5.jpg", 
             srct: "thumb/TeachingAndTesting_GramMangalAina_5.jpg", 
-            description: `Listening to stories in English through Animated Shorts. Gram Mangal School, Dahanu, MH.
-Instructors: Aarti Latkar, Ruchi Shah, IDC, IIT Bombay`, 
+            title: `Listening to stories in English through Animated Shorts. Gram Mangal School, Dahanu, Maharashtra.`, 
             height: 541, width: 800, 
             imgtWidth: 270, imgtHeight: 400,
-            tags: "people"
             },
 
             {  
             src: "large/TeachingAndTesting_GramMangalAina_6.jpg", 
             srct: "thumb/TeachingAndTesting_GramMangalAina_6.jpg", 
-            description: `Ruchi recording student's reading skill. Gram Mangal School, Dahanu, MH.
-Instructors: Aarti Latkar, Ruchi Shah, IDC, IIT Bombay`, 
+            title: `Ruchi recording student's reading skill. Gram Mangal School, Dahanu, Maharashtra.`, 
             height: 1024, width: 633, 
             imgtWidth: 400, imgtHeight: 247,
-            tags: "people lets"
             },
 
             {  
             src: "large/TeachingAndTesting_GramMangalAina_7.jpg", 
             srct: "thumb/TeachingAndTesting_GramMangalAina_7.jpg", 
-            description: `Gayathri recording student's reading skill. Gram Mangal School, Dahanu, MH.
-Instructors: Aarti Latkar, Ruchi Shah, IDC, IIT Bombay`, 
+            title: `Gayathri recording student's reading skill. Gram Mangal School, Dahanu, Maharashtra.`, 
             height: 1024, width: 649, 
             imgtWidth: 400, imgtHeight: 253,
-            tags: "people lets"
             },
 
             {  
             src: "large/TeachingAndTesting_Sirigiripalli_8.jpg", 
             srct: "thumb/TeachingAndTesting_Sirigiripalli_8.jpg", 
-            description: `Umesh recording student's reading skill. Sirigiripalli Village Library, AP
-Instructor: Umesh Wagh, IDC, IIT Bombay`, 
+            title: `Umesh recording student's reading skill. Sirigiripalli Village Library, Andhra Pradesh`, 
             height: 1024, width: 741, 
             imgtWidth: 400, imgtHeight: 289,
-            tags: "people lets"
             },
 
             {  
             src: "large/TheDrawingHand.jpg", 
             srct: "thumb/TheDrawingHand.jpg", 
-            description: ``, 
+            title: ``, 
             height: 1024, width: 682, 
             imgtWidth: 400, imgtHeight: 266,
-            tags: "art"
             },
 
             {  
             src: "large/WallPainting_Khun_1.jpg", 
             srct: "thumb/WallPainting_Khun_1.jpg", 
-            description: `Wall painting
-Instructor: Ruchi Shah, IDC, IIT Bombay`, 
+            title: `Wall painting`, 
             height: 1024, width: 671, 
             imgtWidth: 400, imgtHeight: 262,
-            tags: "art people"
             },
 
             {  
             src: "large/WallPainting_Khun_2.jpg", 
             srct: "thumb/WallPainting_Khun_2.jpg", 
-            description: `Wall painting
-Instructor: Ruchi Shah, IDC, IIT Bombay`, 
+            title: `Wall painting`, 
             height: 1024, width: 682, 
             imgtWidth: 400, imgtHeight: 266,
-            tags: "art people"
             },
 
             {  
             src: "large/WallPainting_Khun_3.jpg", 
             srct: "thumb/WallPainting_Khun_3.jpg", 
-            description: `Ruch with wall painted by students
-Instructor: Ruchi Shah, IDC, IIT Bombay`, 
+            title: `Ruchi with wall painted by students`, 
             height: 1024, width: 601, 
             imgtWidth: 400, imgtHeight: 234,
-            tags: "art people lets"
             },
 
             {  
             src: "large/WorkshopGroup_2.jpg", 
             srct: "thumb/WorkshopGroup_2.jpg", 
-            description: `Aarti and students from KGBV School, Gudupalle at the Agastya Intnl Foundation Library`, 
+            title: `Aarti and students from KGBV School, Gudupalle at the Agastya International Foundation Library`, 
             height: 1024, width: 682, 
             imgtWidth: 400, imgtHeight: 266,
-            tags: "people lets"
             },
 
             {  
             src: "large/YoungIllustrator_Khun_1.jpg", 
             srct: "thumb/YoungIllustrator_Khun_1.jpg", 
-            description: `GSS School, Khun, HP.`, 
+            title: `GSS School, Khun, Himachal Pradesh.`, 
             height: 1024, width: 680, 
             imgtWidth: 400, imgtHeight: 265,
-            tags: "art people"
             },
 
             {  
             src: "large/YoungIllustrator_Khun_2.jpg", 
             srct: "thumb/YoungIllustrator_Khun_2.jpg", 
-            description: `GSS School, Khun, HP.`, 
+            title: `GSS School, Khun, Himachal Pradesh.`, 
             height: 1024, width: 682, 
             imgtWidth: 400, imgtHeight: 266,
-            tags: "art people"
             },
 
             {  
             src: "large/YoungIllustrator_Khun_3.jpg", 
             srct: "thumb/YoungIllustrator_Khun_3.jpg", 
-            description: `GSS School, Khun, HP.`, 
+            title: `GSS School, Khun, Himachal Pradesh.`, 
             height: 1024, width: 682, 
             imgtWidth: 400, imgtHeight: 266,
-            tags: "art people"
             },
 
             {  
             src: "large/YoungIllustrators_Khun_4.jpg", 
             srct: "thumb/YoungIllustrators_Khun_4.jpg", 
-            description: `GSS School, Khun, HP.`, 
+            title: `GSS School, Khun, Himachal Pradesh.`, 
             height: 1024, width: 680, 
             imgtWidth: 400, imgtHeight: 265,
-            tags: "art people"
             },
 
             ],
@@ -902,26 +769,21 @@ Instructor: Ruchi Shah, IDC, IIT Bombay`,
             thumbnailDisplayInterval: 60,
 
             // THUMBNAIL HOVER ANIMATION
-            thumbnailBuildInit2: 'image_scale_1.15',
+            thumbnailBuildInit2: 'image_scale_1.30',
             thumbnailHoverEffect2: 'thumbnail_scale_1.00_1.05_300|image_scale_1.15_1.00',
             touchAnimation: true,
             touchAutoOpenDelay: 500,
 
             // LIGHTBOX
-            viewerToolbar: { display: true },
-            viewerTools: {
-                topLeft: 'label',
-                topRight: 'shareButton, rotateLeft, rotateRight, fullscreenButton, closeButton'
+            viewerToolbar: {
+                display: true,
+                standard: 'label',
             },
 
             // GALLERY THEME
             galleryTheme: {
                 thumbnail: { background: '#111' },
             },
-
-            // DEEP LINKING
-            locationHash: true
-
         });
     });
 

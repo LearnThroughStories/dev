@@ -60,9 +60,8 @@ with fileinput.input() as f:
             {{  
             src: "large/{filename}", 
             srct: "thumb/{filename}", 
-            description: `{desc}`, 
+            title: `{desc}`, 
             height: {lw}, width: {lh}, 
             imgtWidth: {tw}, imgtHeight: {th},
-            tags: {tags}
             }},""")
     
