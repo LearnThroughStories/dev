@@ -141,11 +141,9 @@ a {
 /* Menu end */
 
 .body-text {
+  display: block;
   width: 100%;
-  /* font-weight: 500; */
-  /* font-size: 1em; */
   position: relative;
-  /* margin-bottom: 2em; */
 }
 
 .body-text p {
@@ -157,7 +155,7 @@ a {
 
 /* class common to all text wrappers */
 .text-wrapper {
-  font-size: calc(12px + ((1vw - 3.2px) * 0.5));
+  /* font-size in media queries */
   font-family: "Hepta Slab", serif;
   line-height: 160%;
   z-index: 2;
@@ -167,9 +165,48 @@ a {
   overflow: scroll;
 }
 
+@media screen and (max-width: 500px) {
+  .text-wrapper {
+    font-size: 6px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .text-wrapper {
+    font-size: 10px;
+  }
+}
+
+
+@media screen and (min-width: 900px) {
+  .text-wrapper {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .text-wrapper {
+    font-size: 18px;
+  }
+}
+
+
+.text-center {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow:scroll;
+}
+
 #intro-text-wrapper {
   width: 45%;
-  height: 15%;
+  height: 15.5%;
   color: rgb(56, 63, 57);
   left: 53%;
   top: 34%;
@@ -178,7 +215,7 @@ a {
 
 #logo-text-wrapper {
   width: 40%;
-  top: 55%;
+  top: 51%;
   height: 14%;
   color: rgb(56, 63, 57);
   left: 60%;
@@ -192,7 +229,7 @@ h2 {
   width: 50%;
   height: 10%;
   color: rgb(56, 63, 57);
-  left: 46%;
+  left: 53%;
   top: 77%;
 }
 #our-authors {
@@ -203,10 +240,10 @@ h2 {
 
 #books-text-wrapper {
   width: 28%;
-  height: 15%;
+  height: 18%;
   color: rgb(56, 63, 57);
   left: 31%;
-  top: 10%;
+  top: 8%;
 }
 
 #book-sample {
@@ -217,9 +254,9 @@ h2 {
 
 #films-text-wrapper {
   width: 50%;
-  height: 9%;
+  height: 11%;
   color: rgb(56, 63, 57);
-  left: 41%;
+  left: 40%;
   top: 28%;
 }
 
@@ -237,13 +274,6 @@ h2 {
   color: rgb(56, 63, 57);
   left: 31%;
   top: 61.5%;
-}
-
-
-@media screen and (max-width: 750px) {
-  .text-wrapper {
-    font-size: 8px;
-  }
 }
 
 .bg-img {
@@ -349,5 +379,5 @@ h2 {
 }
 
 .more-text-indicator {
-  box-shadow: 0 -1em 1em -1em rgb(90, 90, 52) inset;
+  /* box-shadow: 0 -1em 1em -1em rgb(90, 90, 52) inset; */
 }

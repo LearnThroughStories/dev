@@ -28,22 +28,29 @@
     </div>
 
     <div id="intro-text-wrapper" class="text-wrapper">
-      <div class="body-text">
-        <p>LeTS (Learn Through Stories) Foundation is a not-for-profit educational venture</p>
-        <p>
-          It is a collaboration between design professionals and young students from far-flung parts of India. </p>
-        <p>Together, we create books.
-        </p>
+      <div class="text-center">
+        <div>
+          <div class="body-text">
+            <p>LeTS (Learn Through Stories) Foundation is a not-for-profit educational venture.</p>
+            <p>
+              It is a collaboration between design professionals and young students from far-flung parts of India. </p>
+            <p>Together, we create books.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
     <div id="logo-text-wrapper" class="text-wrapper">
-      <div class="body-text">
-        <p>
-          Students bring stories. We teach them storyboarding, illustration and book design in multi-day workshops.
-        </p>
-        <p>The very act of producing a book changes learners and their relationship with learning.</p>
-
+      <div class="text-center">
+        <!-- <div> -->
+        <div class="body-text">
+          <p>
+            Students bring stories. We teach them storyboarding, illustration and book design in multi-day workshops.
+          </p>
+          <p>The very act of producing a book changes learners and their relationship with learning.</p>
+        </div>
       </div>
+      <!-- </div> -->
     </div>
     <div id="author-text-wrapper" class="text-wrapper">
       <h2 id="our-authors"> Our Authors</h2>
@@ -52,52 +59,68 @@
   <div id="bottom-section" class="section">
     <img class="bg-img" src="./assets/img/bg-1200-2.jpg" />
     <div id="books-text-wrapper" class="text-wrapper">
-      <h2 id="our-books"> Our Books</h2>
-      <div class="body-text">
-        <p>
-          Kids love these gorgeously produced books, with their names on the book jacket and crowding the credits pages.
-        </p>
-
-        <p> Eyes and minds thus sensitized to quality production of their own work, it is not just words but worlds they
-          create anew.</p>
+      <div class=text-center>
+        <div>
+          <h2 id="our-books">Our Books</h2>
+          <div class="body-text">
+            <p>
+              Kids love these gorgeously produced books, with their names on the book jacket and crowding the credits
+              pages.
+            </p>
+            <p> Eyes and minds thus sensitized to quality production of their own work, it is not just words but worlds
+              they create anew.</p>
+          </div>
+        </div>
       </div>
     </div>
     <div id="book-sample" class="text-wrapper" onclick="openBook();">Please click here for a sample audiobook.
     </div>
     <div id="book-open">
       <!-- <div id="book-open-inner"> -->
-        <!-- <div id="book-sample-title">Clever Kalyani</div>
+      <!-- <div id="book-sample-title">Clever Kalyani</div>
         <div class="close">X</div>
         <div class="break"></div> -->
-        <div id='bb-bookblock' class='bb-bookblock'>
-          <div id="book-close" onclick="closeBook()"> &times;</div>
-          <div class="bb-item"> <img src="assets/img/book-sample/00.png" /></div>
-          <div class="bb-item"> <img src="assets/img/book-sample/01.jpg" /></div>
-          <div class="bb-item"> <img src="assets/img/book-sample/02.jpg" /></div>
-          <div class="bb-item"> <img src="assets/img/book-sample/03.jpg" /></div>
-          <div class="bb-item"> <img src="assets/img/book-sample/04.jpg" /></div>
-        </div>
-        <!-- <div style="height: 20px;"></div>
+      <div id='bb-bookblock' class='bb-bookblock'>
+        <div id="book-close" onclick="closeBook()"> &times;</div>
+        <div class="bb-item"> <img src="assets/img/book-sample/00.png" /></div>
+        <div class="bb-item"> <img src="assets/img/book-sample/01.jpg" /></div>
+        <div class="bb-item"> <img src="assets/img/book-sample/02.jpg" /></div>
+        <div class="bb-item"> <img src="assets/img/book-sample/03.jpg" /></div>
+        <div class="bb-item"> <img src="assets/img/book-sample/04.jpg" /></div>
+      </div>
+      <!-- <div style="height: 20px;"></div>
       </div> -->
     </div>
     <div id="films-text-wrapper" class="text-wrapper">
-      <h2 id="our-films"> Our Films</h2>
-      <div class="body-text">
-        Some of our books are brought to new life as animated films with 
-        voice-overs and subtitles, to offer another kind of immersive
-        learning experience.
+      <div class="text-center">
+        <div>
+          <h2 id="our-films"> Our Films</h2>
+          <div class="body-text">
+            Some of our books are brought to new life as animated films with
+            voice-overs and subtitles, to offer another kind of immersive
+            learning experience.
+          </div>
+        </div>
       </div>
     </div>
     <div id="apps-text-wrapper" class="text-wrapper">
-      <h2 id="our-apps"> Our Apps</h2>
-      <div class="body-text">
-        <p>Our mobile app reads aloud any page from a physical LeTS book. We like tactile!</p>
+      <div class="text-center">
+        <div>
+          <h2 id="our-apps"> Our Apps</h2>
+          <div class="body-text">
+            <p>Our mobile app reads aloud any page from a physical LeTS book. We like tactile!</p>
+          </div>
+        </div>
       </div>
     </div>
     <div id="other-sub-text-wrapper" class="text-wrapper">
-      This approach is not for language alone. 
-      <!-- We are working on other subjects, including science, geography etc.-->
-      We have begun work on science and geography, with plans for more!
+      <div class="text-center">
+        <div class="body-text">
+          This approach is not for language alone.
+          <!-- We are working on other subjects, including science, geography etc.-->
+          We have begun work on science and geography, with plans for more!
+        </div>
+      </div>
     </div>
   </div>
 </body>
@@ -128,9 +151,9 @@
     var page = Page();
     page.init("book-sample");
     var book_close = document.getElementById("book-close");
-    book_close.onclick = () => {closeBook(page);}
+    book_close.onclick = () => { closeBook(page); }
   }
-  
+
   function closeBook(page) {
     var book_open = document.getElementById("book-open");
     book_open.style.display = "none";
