@@ -123,7 +123,11 @@ body > .section {
 }
 
 #links a:hover {
-  color: #cf0808;
+  color: rgb(178, 69, 52);
+}
+
+#links .active-page {
+  border-bottom: 2px solid rgb(178, 69, 52);
 }
 
 /* Menu end */
@@ -345,4 +349,108 @@ h2 {
 .nGY2 .toolbar .label .title {
   font-family: "Hepta Slab", serif;
   font-size: 1.3rem;
+}
+
+#process-container {
+  width: 100%;
+  background-image: url("../img/default-bg.jpg");
+}
+
+#process-top {
+  padding-top:5rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+#process-top img {
+  width: 100%;
+  height: auto;
+}
+
+
+#process-grid {
+  width: 100%;
+  display: grid;
+  position: relative;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-areas: "left middle right";
+}
+
+#process-grid #left {
+  display: flex;
+  flex-direction: column;
+  grid-area: "left";
+  width: 80%;
+  justify-items: center;
+  justify-content: space-evenly;
+  max-width: 200px;
+  margin-left: 10px;
+}
+
+#process-grid#left div {
+  width: 90%;
+  padding: 10%;
+}
+
+#process-grid #left img {
+  width: 100%;
+  height: auto;
+}
+
+#process-grid #middle {
+  padding: 20px;
+  grid-area: middle;
+  font-family: "Hepta Slab", serif;
+  line-height: 160%;
+  font-size: 1em;
+}
+
+#process-grid#right {
+  grid-area: right;
+  display: flex;
+}
+
+#process-grid #middle div {
+  text-align: start;
+  margin-bottom: 1.5em;
+}
+
+#process-grid #middle h2 {
+  text-align: start;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  line-height: 150%;
+}
+
+#process-grid #process-bottom {
+  position: absolute;
+  padding: 10px;
+  bottom: -8vw;
+  /* so that only the tree is to the right, but the kids are below the text*/
+  right: 0;
+  width: 45%;
+}
+
+.spacer {
+  /* extra space due to process-bottom */
+  display: block;
+  width: 10px;
+  height: 3em;
+  border-left: 2px dotted gray;
+  font-size: 1em;
+}
+
+#process-grid #process-bottom img {
+  width: 100%;
+  height: 100%;
+}
+
+#gallery-container {
+  width: 100%;
+  background-image: url("../img/default-bg.jpg");
+}
+
+#nanogallery {
+  padding-top:6rem; 
+  font-size: 1.2rem;
 }
