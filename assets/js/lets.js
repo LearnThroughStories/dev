@@ -105,8 +105,10 @@ function addMoreIndicatorIfOverflow(event) {
   }
 }
 
-$(".text-wrapper").each(function(i, tw) {
-  addMoreIndicatorIfOverflow({ target: tw }); // on loading.
+$(".text-center").each(function(i, tw) {
+  window.setTimeout(() => {
+    addMoreIndicatorIfOverflow({ target: tw }); // on loading.
+  }, 250);
   tw.addEventListener("scroll", addMoreIndicatorIfOverflow);
   window.addEventListener("resize", () => {
     addMoreIndicatorIfOverflow({ target: tw });
