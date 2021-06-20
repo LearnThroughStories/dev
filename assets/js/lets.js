@@ -12,7 +12,7 @@ function Page() {
       return false;
     }
     var url = page <= 9 ? "0" + page : "" + page;
-    url = "assets/audio/" + url + ".mp3";
+    url = "assets/audio/" + config.$bookName + "/" + url + ".mp3";
     var au = new Audio(url);
     au.addEventListener("canplaythrough", (event) => {
       stopAudio();
@@ -45,6 +45,7 @@ function Page() {
         onEndFlip: playAudio,
       });
       initEvents();
+      stopAudio();
       playAudio(0, 0, false); // Cover page
     },
     initEvents = function () {
