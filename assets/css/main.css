@@ -367,8 +367,30 @@ h2 {
   height: auto;
 }
 
+.call-for-stories-wrapper {
+  width: 67%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
 
-#process-grid {
+.call-for-stories {
+  display: grid;
+  justify-content:justify-content;
+  justify-items: center;
+  width: 100%;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-areas: "left middle right";
+}
+
+.call-for-stories img {
+  /* width: 90%; */
+  max-height: 150px;
+  object-fit: contain;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.process-grid {
   width: 100%;
   display: grid;
   position: relative;
@@ -376,71 +398,72 @@ h2 {
   grid-template-areas: "left middle right";
 }
 
-#process-grid #left {
+.process-grid .left {
+  justify-content: space-between;
   display: flex;
   flex-direction: column;
-  grid-area: "left";
-  width: 80%;
-  justify-items: center;
-  justify-content: space-evenly;
-  max-width: 200px;
-  margin-left: 10px;
+  grid-area: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+.process-grid .left div {
+  width: 40%;
+  margin-left: 40%;
+  margin-right: 20%;
 }
 
-#process-grid#left div {
-  width: 90%;
-  padding: 10%;
-}
-
-#process-grid #left img {
+.process-grid .left img {
   width: 100%;
   height: auto;
+  object-fit: contain;
 }
 
-#process-grid #middle {
-  padding: 20px;
+.process-grid .middle {
   grid-area: middle;
   font-family: "Hepta Slab", serif;
   line-height: 160%;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
-#process-grid#right {
+.process-grid.right {
   grid-area: right;
   display: flex;
 }
 
-#process-grid #middle div {
+.process-grid .middle div {
   text-align: start;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
+}
+.process-grid .middle div:last-of-type {
+  text-align: start;
+  margin-bottom: 0em;
 }
 
-#process-grid #middle h2 {
+
+.process-grid .middle h2 {
   text-align: start;
   font-size: 1.2em;
   margin-bottom: 1em;
   line-height: 150%;
 }
 
-#process-grid #process-bottom {
+.process-grid #process-bottom {
   position: absolute;
   padding: 10px;
-  bottom: -8vw;
+  bottom: -12rem;
   /* so that only the tree is to the right, but the kids are below the text*/
   right: 0;
-  width: 45%;
+  width: 57%;
 }
 
 .spacer {
-  /* extra space due to process-bottom */
   display: block;
   width: 10px;
-  height: 3em;
-  border-left: 2px dotted gray;
-  font-size: 1em;
+  height: 0rem;
+  /* border-left: 2px dotted gray; */
 }
 
-#process-grid #process-bottom img {
+.process-grid #process-bottom img {
   width: 100%;
   height: 100%;
 }
