@@ -25,6 +25,9 @@
             width: auto; /* overriding fixed width. div automatically sizes around required space */
             background: white;
         }
+        .modal img {
+            max-width: 90%;
+        }
     </style>
 </head>
 
@@ -68,10 +71,10 @@
                   data-img-src="./assets/img/gallery/large/CallForStoriesFront.jpg" 
                   data-desc="Call for stories (front)" />
                 <img style="grid-area:middle;" src="./assets/img/process-call-for-stories-answer.jpg"
-                  data-img-src="./assets/img/gallery/large/CallForStories_Answer.jpg" , 
+                  data-img-src="./assets/img/gallery/large/CallForStories_Answer.jpg"  
                   data-desc="Student's story submission in Telugu" />
                 <img style="grid-area:right;" src="./assets/img/process-call-for-stories-back.jpg"
-                  data-img-src="./assets/img/gallery/large/CallForStoriesBack.jpg" , 
+                  data-img-src="./assets/img/gallery/large/CallForStoriesBack.jpg"  
                   data-desc="Call for stories (back)" />
             </div>
         </div>
@@ -161,7 +164,6 @@
     </div>
     <div id="image-popup" class="modal">  </div>
     
-</body>
 <script>
     var thumbs = $("img[data-img-src]");
     thumbs.css("cursor", "pointer");
@@ -171,9 +173,9 @@
       imgsrc = thumb.attributes["data-img-src"].textContent;
       desc = thumb.attributes["data-desc"].textContent;
       html = `<img src="${imgsrc}"><div>${desc}</div>`;
-      console.log(html);
       $("#image-popup").append(html).modal();
     });
 </script>     
+</body>
 
 </html>
