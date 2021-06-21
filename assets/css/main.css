@@ -375,7 +375,7 @@ h2 {
 }
 
 .call-for-stories img {
-  /* width: 90%; */
+  width: 90%;
   max-height: 150px;
   object-fit: contain;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
