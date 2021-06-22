@@ -378,8 +378,9 @@ h2 {
   width: 90%;
   max-height: 150px;
   object-fit: contain;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 2px 4px 0 rgb(0 0 0 / 65%);
 }
+
 .process-grid {
   width: 100%;
   display: grid;
