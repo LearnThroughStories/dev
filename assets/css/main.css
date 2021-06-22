@@ -249,6 +249,18 @@ h2 {
   top: 28%;
 }
 
+.open-video {
+	height:300px;
+	width:300px;
+  position: absolute;
+  display: inline-block;
+  top: 45%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+
 #apps-text-wrapper {
   width: 40%;
   height: 7%;
