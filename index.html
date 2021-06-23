@@ -17,7 +17,7 @@
 
 <body>
   <div id="top-section" class="section">
-    <img class="bg-img" src="./assets/img/bg-1200-1.jpg" />
+    <img class="bg-img" style-"width:1200; height:2545" src="./assets/img/bg-1200-1.jpg" />
     <nav id="navbar">
       <div id="logo">
         <a href="index.html"><img src="assets/img/lets-logo-120.png"></a>
@@ -60,7 +60,7 @@
     </div>
   </div>
   <div id="bottom-section" class="section">
-    <img class="bg-img" src="./assets/img/bg-1200-2.jpg" />
+    <img class="bg-img" style="width:1200; height:3003" src="./assets/img/bg-1200-2.jpg" />
     <div id="books-text-wrapper" class="text-wrapper">
       <div class=text-center>
         <div>
@@ -133,6 +133,7 @@
       </div>
 
     </div>
+  </div>
 </body>
 <script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
@@ -172,6 +173,6 @@
 </script>
 
 <script src="assets/js/jquery.yu2fvl.js"></script>
-<script>$(".play-1").yu2fvl();</script>
+<script>$(".play-1").yu2fvl({minPaddingX: 100, minPaddingY: 100, closeText: "&times;"});</script>
 
 </html>

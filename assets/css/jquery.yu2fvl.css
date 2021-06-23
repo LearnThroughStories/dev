@@ -18,10 +18,15 @@
 
 .yu2fvl-close {
   position: absolute;
-  top: -20px;
-  right: -20px;
+  top: -16px;
+  right: -6px;
+  width: 1.55rem;
+  height: 1.55rem;
+  line-height: 1.55rem;
   background-color:black;
+  font-size: 1.5rem;
   color: #fff;
+  border-radius: 50%;
   border: 0;
   background: none;
   cursor: pointer;
@@ -29,13 +34,6 @@
 }
 
 .yu2fvl-close:hover {
-  position: absolute;
-  top: -20px;
-  right: -20px;
   background-color:yellow;
-  color: #fff;
-  border: 0;
-  background: none;
-  cursor: pointer;
-  z-index: 9999;
+  color: black;
 }
