@@ -110,7 +110,7 @@ $(".text-center").each(function(i, tw) {
   window.setTimeout(() => {
     addMoreIndicatorIfOverflow({ target: tw }); // on loading.
   }, 250);
-  tw.addEventListener("scroll", addMoreIndicatorIfOverflow);
+  tw.addEventListener("scroll", addMoreIndicatorIfOverflow, {passive: true});
   window.addEventListener("resize", () => {
     addMoreIndicatorIfOverflow({ target: tw });
   });

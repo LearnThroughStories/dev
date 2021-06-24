@@ -11,42 +11,49 @@
   
   @media screen and (max-width: 500px) {
     html {
+      font-family: "Hepta Slab", serif;
       font-size: 8px;
     }
   }
   
   @media screen and (min-width: 500px) {
     html {
+      font-family: "Hepta Slab", serif;
       font-size: 11px;
     }
   }
   
   @media screen and (min-width: 700px) {
     html {
+      font-family: "Hepta Slab", serif;
       font-size: 13px;
     }
   }
   
   @media screen and (min-width: 800px) {
     html {
+      font-family: "Hepta Slab", serif;
       font-size: 15px;
     }
   }
   
   @media screen and (min-width: 900px) {
     .text-wrapper {
+      font-family: "Hepta Slab", serif;
       font-size: 16px;
     }
   }
   
   @media screen and (min-width: 1000px) {
     .text-wrapper {
+      font-family: "Hepta Slab", serif;
       font-size: 17px;
     }
   }
   
   @media screen and (min-width: 1100px) {
     html {
+      font-family: "Hepta Slab", serif;
       font-size: 18px;
     }
   }
@@ -68,7 +75,6 @@
     font-size: 0.8rem;
     z-index: 3; /* Above text blocks if we want retractable menus*/
     display: flex;
-    font-family: "Hepta Slab", serif;
     padding-left: 10px;
     padding-right: 5px;
     position: absolute;
@@ -120,7 +126,6 @@
     align-content: center;
     grid-auto-flow: column;
     grid-gap: 1.5em;
-    font-family: "Hepta Slab", serif;
     list-style-type: none;
   }
   
