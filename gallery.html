@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LeTS: Learn Through Stories</title>
-    <link rel="stylesheet" href="./assets/css/bookblock.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" type="text/javascript"></script>
@@ -14,8 +13,23 @@
         type="text/css">
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
-    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <style>
+        .nGY2 .toolbar .label .title {
+            font-family: "Hepta Slab", serif;
+            font-size: 1.3rem;
+        }
 
+        #gallery-container {
+            width: 100%;
+            background-image: url("/assets/img/default-bg.jpg");
+        }
+
+        #nanogallery {
+            padding-top: 9rem;
+            font-size: 1.2rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -28,14 +42,14 @@
                 <li class="nav-item"><a href="process.html">OUR PROCESS</a></li>
                 <li class="nav-item active-page"><a href="gallery.html">GALLERY</a></li>
                 <li class="nav-item"><a href="books.html">BOOKS</a></li>
-                <li class="nav-item"><a href="#" class="coming-soon">ABOUT US<span class="coming-soon-text">Coming Soon!</span></a></li>
+                <li class="nav-item"><a href="#" class="coming-soon">ABOUT US<span class="coming-soon-text">Coming
+                            Soon!</span></a></li>
             </ul>
         </nav>
         <div id="nanogallery">
         </div>
         <div class="spacer"></div>
     </div>
-</body>
 <script>
     jQuery(document).ready(function () {
         jQuery("#nanogallery").nanogallery2({
@@ -789,5 +803,5 @@
     });
 
 </script>
-
+</body>
 </html>

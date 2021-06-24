@@ -9,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/bookblock.css" />
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/books-base.css">
+    <link rel="stylesheet" href="assets/css/books.css">
     <style>
         @media only screen and (max-width: 720px) {
             #middle {
@@ -27,9 +29,9 @@
                 <a href="index.html"><img src="assets/img/lets-logo-120.png"></a>
             </div>
             <ul id="links" class="nav">
-                <li class="nav-item"><a href="process.html">OUR PROCESS</li>
-                <li class="nav-item"><a href="gallery.html">GALLERY</li>
-                <li class="nav-item active-page"><a href="books.html">BOOKS</li>
+                <li class="nav-item"><a href="process.html">OUR PROCESS</a></li>
+                <li class="nav-item"><a href="gallery.html">GALLERY</a></li>
+                <li class="nav-item active-page"><a href="books.html">BOOKS</a></li>
                 <li class="nav-item"><a href="#" class="coming-soon">ABOUT US<span class="coming-soon-text">Coming Soon!</span></a></li>
             </ul>
         </nav>
@@ -106,13 +108,13 @@
         }
         var template = `
         <div id='bb-bookblock' class='bb-bookblock'>
-            <div id="book-close" onclick="closeBook()"> &times;</div>
-            <div class="bb-item"> <img src="assets/img/books/BOOKNAME/00.png" /></div>
-            <div class="bb-item"> <img src="assets/img/books/BOOKNAME/01.jpg" /></div>
-            <div class="bb-item"> <img src="assets/img/books/BOOKNAME/02.jpg" /></div>
-            <div class="bb-item"> <img src="assets/img/books/BOOKNAME/03.jpg" /></div>
-            <div class="bb-item"> <img src="assets/img/books/BOOKNAME/04.jpg" /></div>
-        </div>
+            <div id="book-close" onclick="closeBook()"> &times;<\/div>
+            <div class="bb-item"> <img src="assets/img/books/BOOKNAME/00.png" \/><\/div>
+            <div class="bb-item"> <img src="assets/img/books/BOOKNAME/01.jpg" \/><\/div>
+            <div class="bb-item"> <img src="assets/img/books/BOOKNAME/02.jpg" \/><\/div>
+            <div class="bb-item"> <img src="assets/img/books/BOOKNAME/03.jpg" \/><\/div>
+            <div class="bb-item"> <img src="assets/img/books/BOOKNAME/04.jpg" \/><\/div>
+        <\/div>
         `
 
         function openBook(bookname) {

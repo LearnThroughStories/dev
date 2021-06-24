@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-width: 0px;
+  }
+  
+  html {
+    font-size: 12px; /* default. See media queries*/
+  }
+  
+  @media screen and (max-width: 500px) {
+    html {
+      font-size: 8px;
+    }
+  }
+  
+  @media screen and (min-width: 500px) {
+    html {
+      font-size: 11px;
+    }
+  }
+  
+  @media screen and (min-width: 700px) {
+    html {
+      font-size: 13px;
+    }
+  }
+  
+  @media screen and (min-width: 800px) {
+    html {
+      font-size: 15px;
+    }
+  }
+  
+  @media screen and (min-width: 900px) {
+    .text-wrapper {
+      font-size: 16px;
+    }
+  }
+  
+  @media screen and (min-width: 1000px) {
+    .text-wrapper {
+      font-size: 17px;
+    }
+  }
+  
+  @media screen and (min-width: 1100px) {
+    html {
+      font-size: 18px;
+    }
+  }
+  
+  body {
+    max-width: 1200px;
+    width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Menu begin */
+  #navbar {
+    width: 98%;
+    font-size: 0.8rem;
+    z-index: 3; /* Above text blocks if we want retractable menus*/
+    display: flex;
+    font-family: "Hepta Slab", serif;
+    padding-left: 10px;
+    padding-right: 5px;
+    position: absolute;
+    top: 1.5rem;
+  }
+  
+  .coming-soon {
+    position: relative;
+  }
+  
+  .coming-soon .coming-soon-text {
+    visibility: hidden;
+    width: 10rem;
+    height: 2rem;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: 1rem;  
+    line-height: 1.5rem;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 3;
+    top: 100%;
+    right: 0;
+  }
+  
+  .coming-soon:hover .coming-soon-text {
+    visibility: visible;
+  }
+  
+  
+  #logo {
+    margin-left: 0px;
+    margin-right: auto;
+    height: 100%;
+  }
+  
+  #logo img {
+    height: 6rem;
+    width: 6rem;
+  }
+  
+  #navbar ul {
+    display: grid;
+    justify-content: right;
+    align-content: center;
+    grid-auto-flow: column;
+    grid-gap: 1.5em;
+    font-family: "Hepta Slab", serif;
+    list-style-type: none;
+  }
+  
+  #links a {
+    text-decoration: none;
+    color: rgb(122, 116, 116);
+    /* text-transform: uppercase; */
+    font-weight: bold;
+  }
+  
+  #links a:hover {
+    color: rgb(178, 69, 52);
+  }
+  
+  #links .active-page {
+    border-bottom: 2px solid rgb(178, 69, 52);
+  }
+  
+  /* Menu end */
+  
+  h2 {
+    margin-bottom: 10px;
+  }
+  

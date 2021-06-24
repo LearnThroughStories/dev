@@ -15,7 +15,8 @@
     <script src="assets/js/jquery-3.5.1.min.js"></script>
     <script src="assets/js/jquery.modal.min.js"></script>
     <link rel="stylesheet" href="assets/css/jquery.modal.min.css" />
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/process.css">
     <style>
         @media only screen and (max-width: 720px) {
             #middle {
@@ -168,6 +169,7 @@
     </div>
     <div id="image-popup" class="modal">  </div>
     
+
 <script>
     var thumbs = $("img[data-img-src]");
     thumbs.css("cursor", "pointer");
@@ -176,7 +178,7 @@
       const thumb = e.target;
       imgsrc = thumb.attributes["data-img-src"].textContent;
       desc = thumb.attributes["data-desc"].textContent;
-      html = `<img src="${imgsrc}"><div>${desc}</div>`;
+      html = `<img src="${imgsrc}"><div>${desc}<\/div>`;
       $("#image-popup").append(html).modal();
     });
 </script>     
