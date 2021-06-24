@@ -6,13 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LeTS: Learn Through Stories</title>
-  <link rel="stylesheet" href="./assets/css/main.css" />
-  <link rel="stylesheet" href="./assets/css/bookblock.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.css" rel="stylesheet" type="text/css">
-  <link href="assets/css/jquery.yu2fvl.css" rel="stylesheet" type="text/css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <link href="./assets/css/bookblock.css"   rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link href="assets/css/jquery.yu2fvl.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="./assets/css/main.css" />
 </head>
 
 <body>
@@ -60,7 +59,7 @@
     </div>
   </div>
   <div id="bottom-section" class="section">
-    <img class="bg-img" style="width:1200; height:3003" src="./assets/img/bg-1200-2.jpg" />
+    <img class="bg-img" style="width:1200; height:3003" loading="lazy" src="./assets/img/bg-1200-2.jpg" />
     <div id="books-text-wrapper" class="text-wrapper">
       <div class=text-center>
         <div>
@@ -81,11 +80,11 @@
     <div id="book-open">
       <div id='bb-bookblock' class='bb-bookblock'>
         <div id="book-close" onclick="closeBook()"> &times;</div>
-        <div class="bb-item"> <img src="assets/img/books/CleverKalyani/00.png" /></div>
-        <div class="bb-item"> <img src="assets/img/books/CleverKalyani/01.jpg" /></div>
-        <div class="bb-item"> <img src="assets/img/books/CleverKalyani/02.jpg" /></div>
-        <div class="bb-item"> <img src="assets/img/books/CleverKalyani/03.jpg" /></div>
-        <div class="bb-item"> <img src="assets/img/books/CleverKalyani/04.jpg" /></div>
+        <div class="bb-item"> <img data-src="assets/img/books/CleverKalyani/00.png" /></div>
+        <div class="bb-item"> <img data-src="assets/img/books/CleverKalyani/01.jpg" /></div>
+        <div class="bb-item"> <img data-src="assets/img/books/CleverKalyani/02.jpg" /></div>
+        <div class="bb-item"> <img data-src="assets/img/books/CleverKalyani/03.jpg" /></div>
+        <div class="bb-item"> <img data-src="assets/img/books/CleverKalyani/04.jpg" /></div>
       </div>
     </div>
     <div id="films-text-wrapper" class="text-wrapper">
@@ -135,11 +134,11 @@
     </div>
   </div>
 </body>
-<script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
-<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
-<script type="text/javascript" src="assets/js/jquerypp.custom.js"></script>
-<script type="text/javascript" src="assets/js/jquery.bookblock.js"></script>
-<script type="text/javascript" src="assets/js/lets.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script defer type="text/javascript" src="assets/js/jquerypp.custom.js"></script>
+<script defer type="text/javascript" src="assets/js/jquery.bookblock.js"></script>
+<script  type="text/javascript" src="assets/js/lets.js"></script>
 <script>
   function getViewportWidth() {
     return Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
@@ -150,6 +149,13 @@
   }
 
   function openBook() {
+    $(".bb-item > img").each((i,el) => {
+      const jel = $(el);
+      jel.attr("src", (_, v) => {
+        return (v) ? undefined : jel.attr("data-src");
+      });
+    });
+
     var book_open = document.getElementById("book-open");
     var bb_bookblock = document.getElementById("bb-bookblock");
     book_open.style.display = "block";
@@ -172,7 +178,10 @@
   }
 </script>
 
-<script src="assets/js/jquery.yu2fvl.js"></script>
-<script>$(".play-1").yu2fvl({minPaddingX: 100, minPaddingY: 100, closeText: "&times;"});</script>
-
+<script defer src="assets/js/jquery.yu2fvl.js"></script>
+<script >
+  window.setTimeout(() => {
+    $(".play-1").yu2fvl({minPaddingX: 100, minPaddingY: 100, closeText: "&times;"});
+  }, 250); /* defer setting up the popup window because it loads up a LOT of youtube scripts*/
+</script>
 </html>
