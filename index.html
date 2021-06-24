@@ -80,18 +80,10 @@
         </div>
       </div>
     </div>
-    <div id="book-sample" class="text-wrapper" onclick="openBook();">Please click here for a sample audiobook.
+    <div id="book-sample" class="text-wrapper" onclick="openBook('CleverKalyani');">Please click here for a sample audiobook.
     </div>
-    <div id="book-open">
-      <div id='bb-bookblock' class='bb-bookblock'>
-        <div id="book-close" onclick="closeBook()"> &times;</div>
-        <div class="bb-item"> <img data-src="assets/img/books/CleverKalyani/00.png" /></div>
-        <div class="bb-item"> <img data-src="assets/img/books/CleverKalyani/01.jpg" /></div>
-        <div class="bb-item"> <img data-src="assets/img/books/CleverKalyani/02.jpg" /></div>
-        <div class="bb-item"> <img data-src="assets/img/books/CleverKalyani/03.jpg" /></div>
-        <div class="bb-item"> <img data-src="assets/img/books/CleverKalyani/04.jpg" /></div>
-      </div>
-    </div>
+    
+    <div id="book-open"></div>   <!-- div for modal -->
     <div id="films-text-wrapper" class="text-wrapper">
       <div class="text-center">
         <div>
@@ -143,45 +135,6 @@
   <script defer type="text/javascript" src="assets/js/jquerypp.custom.js"></script>
   <script defer type="text/javascript" src="assets/js/jquery.bookblock.js"></script>
   <script  type="text/javascript" src="assets/js/lets.js"></script>
-  <script>
-    function getViewportWidth() {
-      return Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-    }
-    function getViewportHeight() {
-      return Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
-
-    }
-
-    function openBook() {
-      $(".bb-item > img").each((i,el) => {
-        const jel = $(el);
-        jel.attr("src", (_, v) => {
-          return (v) ? undefined : jel.attr("data-src");
-        });
-      });
-
-      var book_open = document.getElementById("book-open");
-      var bb_bookblock = document.getElementById("bb-bookblock");
-      book_open.style.display = "block";
-
-      if (getViewportWidth() < getViewportHeight()) {
-        bb_bookblock.classList.add("bb-vw");
-      } else {
-        bb_bookblock.classList.add("bb-vh");
-      }
-      var page = Page();
-      page.init("CleverKalyani");
-      var book_close = document.getElementById("book-close");
-      book_close.onclick = () => { closeBook(page); }
-    }
-
-    function closeBook(page) {
-      var book_open = document.getElementById("book-open");
-      book_open.style.display = "none";
-      page.close();
-    }
-  </script>
-
   <script defer src="assets/js/jquery.yu2fvl.js"></script>
   <script >
     window.setTimeout(() => {
