@@ -150,3 +150,59 @@
     margin-bottom: 10px;
   }
   
+  #footer {
+    display: grid;
+    height: 10rem;
+    width: 100%;
+    grid-template-columns: [logo]30% [social]17% [pic]53%;
+    grid-template-rows: 10rem;
+    align-items: center;
+  }
+  
+  #footer #logotext {
+    grid-column-start: logo;
+    display: flex;
+    height: 70%;
+    max-width: 100%;
+    align-items: center;
+  }
+
+  #footer #logotext img {
+    max-width: 100%;
+    height: 85%;
+    object-fit: contain;
+  }
+  
+  #footer #social {
+    grid-column-start: social;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-rows: 1.8rem;
+    justify-content: space-around;
+    align-content: center;
+  }
+  
+  #footer #social a {
+    width: 100%;
+    height: 100%;
+  }
+
+  #footer #social img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  #footer #pic {
+    grid-column-start: pic;
+    text-align: end;
+    height: 100%;
+    width: 100%;
+  }
+
+  #footer #pic img {
+    height: 100%;
+    object-fit: contain;
+    max-width: 100%;
+  }
