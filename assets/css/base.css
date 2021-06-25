@@ -152,24 +152,24 @@
   
   #footer {
     display: grid;
-    height: 10rem;
     width: 100%;
-    grid-template-columns: [logo]30% [social]17% [pic]53%;
-    grid-template-rows: 10rem;
+    padding: 10px;
+    grid-template-columns: [logo]50% auto [social]25%;
+    grid-template-rows: 7rem;
     align-items: center;
-  }
+}
   
   #footer #logotext {
     grid-column-start: logo;
     display: flex;
-    height: 70%;
+    height: 85%;
     max-width: 100%;
     align-items: center;
   }
 
   #footer #logotext img {
     max-width: 100%;
-    height: 85%;
+    height: 100%;
     object-fit: contain;
   }
   
@@ -192,17 +192,4 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-  }
-
-  #footer #pic {
-    grid-column-start: pic;
-    text-align: end;
-    height: 100%;
-    width: 100%;
-  }
-
-  #footer #pic img {
-    height: 100%;
-    object-fit: contain;
-    max-width: 100%;
   }
