@@ -1,6 +1,6 @@
 #books-container {
   width: 100%;
-  background-image: url("../img/default-bg.jpg");
+  /* background-image: url("../img/default-bg.jpg"); */
   background-position-y: 50%;
 }
 
@@ -10,29 +10,52 @@
   max-width: 100%;
 }
 
-#books-top img {
-  width: 100%;
-  height: auto;
-}
-
-#books-grid {
-  width: 100%;
+#shelf {
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  /* aspect-ratio: 140 / 220; */
   display: grid;
-  position: relative;
-  grid-template-columns: 20% 60% 20%;
-  grid-template-areas: "left middle right";
+  grid-template-rows: repeat(4, 25%);
+  grid-template-columns: repeat(6, 16.66%);
+  grid-template-areas: 
+        "ck ck er kh ma rc"
+        "ck ck ro ro bm bc"
+        "tc cm ro ro mr mr"
+        "S  S  fc mg mr mr";
 }
 
-.shelf {
-  display: flex;
+.grid-cell {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  #shelf {
+    grid-template-rows: repeat(6, 16.66%);
+    grid-template-columns: repeat(4, 25%);
+    grid-template-areas: 
+          "ck ck er kh "
+          "ck ck ma rc"
+          "bm bc ro ro"
+          "tc cm ro ro"
+          "fc mg mr mr"
+          "S  S  mr mr";
+  }
+  .grid-cell {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .book-on-shelf {
-  margin: 3rem 2em;
-  max-height: 220px;
-  max-width: 143px;
-  height: 25vh;
-  width: calc(25vh * 143 / 220); /* icons are 143x220; maintaining that aspect ratio */
+  /* margin: 3rem 2em; */
+  /* max-height: 220px;
+  max-width: 143px; */
+  height: 100%;
+  width: 100%;
   position: relative;
   z-index: 1;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 9px 20px 0 rgba(0, 0, 0, 0.25);
@@ -66,4 +89,45 @@
 .book-on-shelf:hover img {
   transform: rotateY(-25deg);
   box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Book placements */
+#ck {
+  grid-area: ck;
+}
+#bm {
+  grid-area: bm;
+}
+#bc {
+  grid-area: bc;
+}
+#cm {
+  grid-area: cm;
+}
+#er {
+  grid-area: er;
+}
+#fc {
+  grid-area: fc;
+}
+#kh {
+  grid-area: kh;
+}
+#ma {
+  grid-area: ma;
+}
+#mr {
+  grid-area: mr;
+}
+#mg {
+  grid-area: mg;
+}
+#rc {
+  grid-area: rc;
+}
+#ro {
+  grid-area: ro;
+}
+#tc {
+  grid-area: tc;
 }
