@@ -5,6 +5,26 @@
     border-width: 0px;
   }
   
+  @font-face {
+    font-family: 'Hepta Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/hepta-slab-400-lean.woff2);
+  }
+  @font-face {
+    font-family: 'Hepta Slab';
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/hepta-slab-500-lean.woff2);
+  }
+  @font-face {
+    font-family: 'Hepta Slab';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/hepta-slab-700-lean.woff2);
+  }
+  
+
   html {
     font-size: 12px; /* default. See media queries*/
   }
