@@ -141,40 +141,39 @@
       }
     }
 
-    // https://gist.github.com/james2doyle/28a59f8692cec6f334773007b31a1523
     function loadScriptAsync(src) {
       return new Promise(function (resolve, reject) {
-        const s = document.createElement('script');
-        let r = false;
-        s.type = 'text/javascript';
-        s.src = src;
-        s.async = true;
-        s.onerror = function (err) {
-          reject(err, s);
-        };
-        s.onload = s.onreadystatechange = function () {
-          // console.log(this.readyState); // uncomment this line to see which ready states are called.
-          if (!r && (!this.readyState || this.readyState == 'complete')) {
-            r = true;
+        const scr = document.createElement('script');
+        var resolved = false;
+        scr.type = 'text/javascript';
+        scr.async = true;
+        scr.onerror =  (err) => reject("script " + src + " not loaded: Error: " + err, scr);
+        scr.onload = scr.onreadystatechange =  () => {
+          if (!resolved && (!this.readyState || this.readyState == 'complete')) {
+            resolved = true;
             resolve();
-            console.log("loaded :", src);
-
+            //console.log("loaded :", src);
           }
         };
-        const t = document.getElementsByTagName('script')[0];
-        t.parentElement.insertBefore(s, t);
+        scr.src = src;
+        document.body.append(scr);
       });
     }
-    async function loadScripts() {
-      await loadScriptAsync("assets/js/jquery-3.5.1.min.js");
-      await loadScriptAsync("https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js");
-      await loadScriptAsync("assets/js/jquerypp.custom.js");
-      await loadScriptAsync("assets/js/jquery.bookblock.js");
-      await loadScriptAsync("assets/js/lets.js");
-      await loadScriptAsync("assets/js/jquery.yu2fvl.js");
+    async function loadScriptsAsync() {
+      var scripts = [
+        "assets/js/jquery-3.5.1.min.js",
+        "assets/js/modernizr.custom.js",
+        "assets/js/jquerypp.custom.js",
+        "assets/js/jquery.bookblock.js",
+        "assets/js/lets.js",
+        "assets/js/jquery.yu2fvl.js"];
+      for (const scr of scripts) {
+        await loadScriptAsync(scr);
+      }
     }
+
     function loadLazy() {
-      loadScripts().then(() => {
+      loadScriptsAsync().then(() => {
         $(".play-1").each((i, el) => {
           const jel = $(el);
           jel.attr("href", jel.attr("data-href"));
@@ -190,9 +189,6 @@
       });
     }
   </script>
-
-
-
 
 </body>
 
