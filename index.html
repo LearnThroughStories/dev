@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LeTS: Learn Through Stories</title>
-  <link href="./assets/css/bookblock.css"   rel="stylesheet">
+  <link href="./assets/css/bookblock.css" rel="stylesheet">
   <link href="assets/css/jquery.yu2fvl.css" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/base.css" />
   <link rel="stylesheet" href="./assets/css/index.css" />
@@ -24,8 +24,9 @@
         <li class="nav-item"><a href="process.html">OUR PROCESS</a></li>
         <li class="nav-item"><a href="gallery.html">GALLERY</a></li>
         <li class="nav-item"><a href="books.html">BOOKS</a></li>
-        <li class="nav-item"><a href="#" class="coming-soon">ABOUT US<span class="coming-soon-text">Coming Soon!</span></a></li>
-        </ul>
+        <li class="nav-item"><a href="#" class="coming-soon">ABOUT US<span class="coming-soon-text">Coming
+              Soon!</span></a></li>
+      </ul>
     </nav>
 
 
@@ -58,7 +59,7 @@
     </div>
   </div>
   <div id="bottom-section" class="section">
-    <img class="bg-img" loading="lazy" src="./assets/img/bg-1200-2.jpg" />
+    <img class="bg-img" loading="lazy" src="./assets/img/bg-1200-2.jpg" onload="loadLazy();"/>
     <div id="books-text-wrapper" class="text-wrapper">
       <div class=text-center>
         <div>
@@ -74,10 +75,11 @@
         </div>
       </div>
     </div>
-    <div id="book-sample" class="text-wrapper" onclick="openBook('CleverKalyani');">Please click here for a sample audiobook.
+    <div id="book-sample" class="text-wrapper" onclick="openBook('CleverKalyani');">Please click here for a sample
+      audiobook.
     </div>
-    
-    <div id="book-open"></div>   <!-- div for modal -->
+
+    <div id="book-open"></div> <!-- div for modal -->
     <div id="films-text-wrapper" class="text-wrapper">
       <div class="text-center">
         <div>
@@ -90,9 +92,9 @@
         </div>
       </div>
     </div>
-	
+
     <p><a class="play-1 open-video" href="#" data-href="https://www.youtube.com/embed/GJSGdhXDzOQ"></a></p>
-    
+
     <div id="apps-text-wrapper" class="text-wrapper">
       <div class="text-center">
         <div>
@@ -113,35 +115,85 @@
       </div>
     </div>
     <div id="footer">
-      <div id="logotext"> <img src="assets/img/ftr-logo.png">  </div>
+      <div id="logotext"> <img src="assets/img/ftr-logo.png"> </div>
       <div id="social">
-          <a href="mailto:contactletsfoundation@gmail.com?body=Tell us about yourself and share your thoughts">
-              <img src="assets/img/ftr-email.png" alt="email" > 
-          </a>
-          <a href="#" > <img src="assets/img/ftr-fb.png" alt="facebook" > </a>
-          <a href="#" > <img src="assets/img/ftr-instagram.png" alt="instagram" ></a>
-          <a href="#" > <img src="assets/img/ftr-linkedin.png" alt="linkedin"></a>
+        <a href="mailto:contactletsfoundation@gmail.com?body=Tell us about yourself and share your thoughts">
+          <img src="assets/img/ftr-email.png" alt="email">
+        </a>
+        <a href="#"> <img src="assets/img/ftr-fb.png" alt="facebook"> </a>
+        <a href="#"> <img src="assets/img/ftr-instagram.png" alt="instagram"></a>
+        <a href="#"> <img src="assets/img/ftr-linkedin.png" alt="linkedin"></a>
       </div>
     </div>
     <div style="height: 1rem; background-color: grey; width: 100%;">
-      
-    </div>
 
+    </div>
   </div>
-  <script src="assets/js/jquery-3.5.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script defer type="text/javascript" src="assets/js/jquerypp.custom.js"></script>
-  <script defer type="text/javascript" src="assets/js/jquery.bookblock.js"></script>
-  <script  type="text/javascript" src="assets/js/lets.js"></script>
-  <script defer src="assets/js/jquery.yu2fvl.js"></script>
-  <script >
-    window.setTimeout(() => {
-      $(".play-1").each((i,el) => {
-        const jel = $(el);
-        jel.attr("href", jel.attr("data-href"));
-       });
-      $(".play-1").yu2fvl({minPaddingX: 100, minPaddingY: 100, closeText: "&times;"});
-    }, 250); /* defer setting up the popup window because it loads up a LOT of youtube scripts*/
+
+  <script>
+    function addMoreIndicatorIfOverflow(event) {
+      let t = event.target;
+      if (t.clientHeight > 0 && (t.scrollHeight - t.scrollTop > t.clientHeight)) {
+        console.log({ obj: t, ch: t.clientHeight, sh: t.scrollHeight, st: t.scrollTop });
+        t.classList.add("more-text-indicator");
+      } else {
+        t.classList.remove("more-text-indicator");
+      }
+    }
+
+    // https://gist.github.com/james2doyle/28a59f8692cec6f334773007b31a1523
+    function loadScriptAsync(src) {
+      return new Promise(function (resolve, reject) {
+        const s = document.createElement('script');
+        let r = false;
+        s.type = 'text/javascript';
+        s.src = src;
+        s.async = true;
+        s.onerror = function (err) {
+          reject(err, s);
+        };
+        s.onload = s.onreadystatechange = function () {
+          // console.log(this.readyState); // uncomment this line to see which ready states are called.
+          if (!r && (!this.readyState || this.readyState == 'complete')) {
+            r = true;
+            resolve();
+            console.log("loaded :", src);
+
+          }
+        };
+        const t = document.getElementsByTagName('script')[0];
+        t.parentElement.insertBefore(s, t);
+      });
+    }
+    async function loadScripts() {
+      await loadScriptAsync("assets/js/jquery-3.5.1.min.js");
+      await loadScriptAsync("https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js");
+      await loadScriptAsync("assets/js/jquerypp.custom.js");
+      await loadScriptAsync("assets/js/jquery.bookblock.js");
+      await loadScriptAsync("assets/js/lets.js");
+      await loadScriptAsync("assets/js/jquery.yu2fvl.js");
+    }
+    function loadLazy() {
+      loadScripts().then(() => {
+        $(".play-1").each((i, el) => {
+          const jel = $(el);
+          jel.attr("href", jel.attr("data-href"));
+        });
+        $(".play-1").yu2fvl({ minPaddingX: 100, minPaddingY: 100, closeText: "&times;" });
+
+        $(".text-center").each(function (i, tw) {
+          tw.addEventListener("scroll", addMoreIndicatorIfOverflow, { passive: true });
+          window.addEventListener("resize", () => {
+            addMoreIndicatorIfOverflow({ target: tw });
+          });
+        });
+      });
+    }
   </script>
+
+
+
+
 </body>
+
 </html>

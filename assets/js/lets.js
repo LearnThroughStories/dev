@@ -90,44 +90,6 @@ function Page() {
 
 window.Page = Page;
 
-// Modern browsers don't show scroll bars, so some
-// visual indication is necessary, otherwise the text looks clipped
-// esp on small screens.
-// For all text-wrappers, this indicator is in the form of a 
-// bottom shadow that somewhat obscures the last visible line, which
-// nudge the viewer to scroll down to get it into clear view.
-
-function addMoreIndicatorIfOverflow(event) {
-  let t = event.target;
-  if (t.clientHeight > 0 && (t.scrollHeight - t.scrollTop > t.clientHeight)) {
-    // console.log({obj: t, ch: t.clientHeight, sh: t.scrollHeight, st: t.scrollTop});
-    t.classList.add("more-text-indicator");
-  } else {
-    t.classList.remove("more-text-indicator");
-  }
-}
-
-
-$(".text-center").each(function(i, tw) {
-  const options = {
-    root: document.body,
-    rootMargin: '0px',
-    threshold: 0
-  }
-  
-  const observer = new IntersectionObserver(() => {
-    console.log({target: tw, "msg": "intersection"})
-    addMoreIndicatorIfOverflow({target: tw });
-  }, options); // check for intersection with the viewport, then install. 
-  
-  observer.observe(tw);
-
-  tw.addEventListener("scroll", addMoreIndicatorIfOverflow, {passive: true});
-  window.addEventListener("resize", () => {
-    addMoreIndicatorIfOverflow({ target: tw });
-  });
-});
-
 /* Support for book popup */
 
 function getViewportWidth() {
