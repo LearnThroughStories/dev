@@ -100,16 +100,28 @@ window.Page = Page;
 function addMoreIndicatorIfOverflow(event) {
   let t = event.target;
   if (t.clientHeight > 0 && (t.scrollHeight - t.scrollTop > t.clientHeight)) {
+    // console.log({obj: t, ch: t.clientHeight, sh: t.scrollHeight, st: t.scrollTop});
     t.classList.add("more-text-indicator");
   } else {
     t.classList.remove("more-text-indicator");
   }
 }
 
+
 $(".text-center").each(function(i, tw) {
-  window.setTimeout(() => {
-    addMoreIndicatorIfOverflow({ target: tw }); // on loading.
-  }, 250);
+  const options = {
+    root: document.body,
+    rootMargin: '0px',
+    threshold: 0
+  }
+  
+  const observer = new IntersectionObserver(() => {
+    console.log({target: tw, "msg": "intersection"})
+    addMoreIndicatorIfOverflow({target: tw });
+  }, options); // check for intersection with the viewport, then install. 
+  
+  observer.observe(tw);
+
   tw.addEventListener("scroll", addMoreIndicatorIfOverflow, {passive: true});
   window.addEventListener("resize", () => {
     addMoreIndicatorIfOverflow({ target: tw });

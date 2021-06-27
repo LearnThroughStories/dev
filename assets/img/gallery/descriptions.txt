@@ -118,22 +118,22 @@ BoyAndCalf_BookSetAndOpenBook.jpg: book
 BoyOnBicycle.jpg: people
 
 BunchOfStudents_Gazebo_GramMangal_1.jpg: people
-    Viewing animated shorts on tablets, Gram Mangal School, Dahanu, Maharashtra
+    Viewing animated short films on tablets, Gram Mangal School, Dahanu, Maharashtra
 
 BunchOfStudents_Gazebo_GramMangal_2.jpg: people
     Gram Mangal School, Dahanu, Maharashtra
 
 CleverKalyani_1.jpg: art
-    “Clever Kalyani” artwork Agastya International Foundation, Kuppam, Andhra Pradesh
+    “Clever Kalyani”, artwork Agastya International Foundation, Kuppam, Andhra Pradesh
 
 CleverKalyani_2.jpg: art
-    “Clever Kalyani” artwork Agastya International Foundation, Kuppam, Andhra Pradesh
+    “Clever Kalyani”, artwork Agastya International Foundation, Kuppam, Andhra Pradesh
 
 CleverKalyani_3.jpg: art
-    “Clever Kalyani” artwork Agastya International Foundation, Kuppam, Andhra Pradesh
+    “Clever Kalyani”, artwork Agastya International Foundation, Kuppam, Andhra Pradesh
 
 CleverKalyani_4.jpg: art
-    “Clever Kalyani” artwork Agastya International Foundation, Kuppam, Andhra Pradesh
+    “Clever Kalyani”, artwork Agastya International Foundation, Kuppam, Andhra Pradesh
 
 FishAndFun_Dahanu.jpg: people
     Art and Craft workshop (Std. V-VI), Gram Mangal School, Dahanu, Maharashtra
@@ -196,13 +196,13 @@ TeachingAndTesting_GramMangalAina_2.jpg: people lets
     Aarti testing proficiency levels, Gram Mangal School, Dahanu, Maharashtra
 
 TeachingAndTesting_GramMangalAina_3.jpg: people
-    Listening to stories in English through Animated Shorts, Gram Mangal School, Dahanu, Maharashtra
+    Listening to stories in English through animated short films, Gram Mangal School, Dahanu, Maharashtra
 
 TeachingAndTesting_GramMangalAina_4.jpg: people
-    Listening to stories in English through Animated Shorts, Gram Mangal School, Dahanu, Maharashtra
+    Listening to stories in English through animated short films, Gram Mangal School, Dahanu, Maharashtra
 
 TeachingAndTesting_GramMangalAina_5.jpg: people
-    Listening to stories in English through Animated Shorts, Gram Mangal School, Dahanu, Maharashtra
+    Listening to stories in English through animated short films, Gram Mangal School, Dahanu, Maharashtra
 
 TeachingAndTesting_GramMangalAina_6.jpg: people lets
     Ruchi recording student's reading skill, Gram Mangal School, Dahanu, Maharashtra
