@@ -98,7 +98,7 @@
       </div>
     </div>
 	
-    <p><a class="play-1 open-video" href="https://www.youtube.com/embed/GJSGdhXDzOQ"></a></p>
+    <p><a class="play-1 open-video" href="#" data-href="https://www.youtube.com/embed/GJSGdhXDzOQ"></a></p>
     
     <div id="apps-text-wrapper" class="text-wrapper">
       <div class="text-center">
@@ -143,6 +143,10 @@
   <script defer src="assets/js/jquery.yu2fvl.js"></script>
   <script >
     window.setTimeout(() => {
+      $(".play-1").each((i,el) => {
+        const jel = $(el);
+        jel.attr("href", jel.attr("data-href"));
+       });
       $(".play-1").yu2fvl({minPaddingX: 100, minPaddingY: 100, closeText: "&times;"});
     }, 250); /* defer setting up the popup window because it loads up a LOT of youtube scripts*/
   </script>
