@@ -19,10 +19,10 @@
   grid-template-rows: repeat(4, 25%);
   grid-template-columns: repeat(6, 16.66%);
   grid-template-areas: 
-        "ck ck er kh ma rc"
-        "ck ck ro ro bm bc"
-        "tc cm ro ro mr mr"
-        "S  S  fc mg mr mr";
+        "ck  ck  er kh ma rc"
+        "ck  ck  ro ro bm bc1"
+        "tc  cm  ro ro mr mr"
+        "bc2 bc3 fc mg mr mr";
 }
 
 .grid-cell {
@@ -36,12 +36,12 @@
     grid-template-rows: repeat(6, 16.66%);
     grid-template-columns: repeat(4, 25%);
     grid-template-areas: 
-          "ck ck er kh "
-          "ck ck ma rc"
-          "bm bc ro ro"
-          "tc cm ro ro"
-          "fc mg mr mr"
-          "S  S  mr mr";
+          "ck  ck er kh "
+          "ck  ck  ma rc"
+          "bm  bc  ro ro"
+          "tc  cm  ro ro"
+          "fc  mg  mr mr"
+          "bc2 bc3 mr mr";
   }
   .grid-cell {
     padding: 20px;
@@ -98,9 +98,18 @@
 #bm {
   grid-area: bm;
 }
-#bc {
-  grid-area: bc;
+#bc1 {
+  grid-area: bc1;
 }
+
+#bc2 {
+  grid-area: bc2;
+}
+
+#bc3 {
+  grid-area: bc3;
+}
+
 #cm {
   grid-area: cm;
 }
