@@ -9,6 +9,11 @@
 
 }
 
+.bb-bookblock {
+	max-width: 1024px;
+	max-height: 787px;
+}
+
 .bb-bookblock img {
 	width: 100%;
 	height: 100%;
