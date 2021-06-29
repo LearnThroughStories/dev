@@ -173,20 +173,22 @@
     }
 
     function loadLazy() {
-      loadScriptsAsync().then(() => {
-        $(".play-1").each((i, el) => {
-          const jel = $(el);
-          jel.attr("href", jel.attr("data-href"));
-        });
-        $(".play-1").yu2fvl({ minPaddingX: 100, minPaddingY: 100, closeText: "&times;" });
+      window.setTimeout(() => {
+        loadScriptsAsync().then(() => {
+          $(".play-1").each((i, el) => {
+            const jel = $(el);
+            jel.attr("href", jel.attr("data-href"));
+          });
+          $(".play-1").yu2fvl({ minPaddingX: 100, minPaddingY: 100, closeText: "&times;" });
 
-        $(".text-center").each(function (i, tw) {
-          tw.addEventListener("scroll", addMoreIndicatorIfOverflow, { passive: true });
-          window.addEventListener("resize", () => {
-            addMoreIndicatorIfOverflow({ target: tw });
+          $(".text-center").each(function (i, tw) {
+            tw.addEventListener("scroll", addMoreIndicatorIfOverflow, { passive: true });
+            window.addEventListener("resize", () => {
+              addMoreIndicatorIfOverflow({ target: tw });
+            });
           });
         });
-      });
+      }, 10);
     }
   </script>
 
