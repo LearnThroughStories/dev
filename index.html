@@ -11,6 +11,67 @@
   <link rel="stylesheet" href="./assets/css/base.css" />
   <link rel="stylesheet" href="./assets/css/index.css" />
   <link rel="stylesheet" href="./assets/css/books-base.css" />
+  <script>
+    function addMoreIndicatorIfOverflow(event) {
+      let t = event.target;
+      if (t.clientHeight > 0 && (t.scrollHeight - t.scrollTop > t.clientHeight)) {
+        t.classList.add("more-text-indicator");
+      } else {
+        t.classList.remove("more-text-indicator");
+      }
+    }
+
+    function loadScriptAsync(src) {
+      return new Promise(function (resolve, reject) {
+        const scr = document.createElement('script');
+        var resolved = false;
+        scr.type = 'text/javascript';
+        scr.async = true;
+        scr.onerror =  (err) => reject("script " + src + " not loaded: Error: " + err, scr);
+        scr.onload = scr.onreadystatechange =  () => {
+          if (!resolved && (!this.readyState || this.readyState == 'complete')) {
+            resolved = true;
+            resolve();
+            //console.log("loaded :", src);
+          }
+        };
+        scr.src = src;
+        document.body.append(scr);
+      });
+    }
+    async function loadScriptsAsync() {
+      var scripts = [
+        "assets/js/jquery-3.5.1.min.js",
+        "assets/js/modernizr.custom.js",
+        "assets/js/jquerypp.custom.js",
+        "assets/js/jquery.bookblock.js",
+        "assets/js/lets.js",
+        "assets/js/jquery.yu2fvl.js"];
+      for (const scr of scripts) {
+        await loadScriptAsync(scr);
+      }
+    }
+
+    function loadLazy() {
+      window.setTimeout(() => {
+        loadScriptsAsync().then(() => {
+          $(".play-1").each((i, el) => {
+            const jel = $(el);
+            jel.attr("href", jel.attr("data-href"));
+          });
+          $(".play-1").yu2fvl({ minPaddingX: 100, minPaddingY: 100, closeText: "&times;" });
+
+          $(".text-center").each(function (i, tw) {
+            tw.addEventListener("scroll", addMoreIndicatorIfOverflow, { passive: true });
+            window.addEventListener("resize", () => {
+              addMoreIndicatorIfOverflow({ target: tw });
+            });
+          });
+        });
+      }, 10);
+    }
+  </script>
+
 </head>
 
 <body>
@@ -117,81 +178,16 @@
     <div id="footer">
       <div id="logotext"> <img src="assets/img/ftr-logo.png"> </div>
       <div id="social">
-        <a href="mailto:contactletsfoundation@gmail.com?body=Tell us about yourself and share your thoughts">
-          <img src="assets/img/ftr-email.png" alt="email">
+        <a href="mailto:contactletsfoundation@gmail.com?body=Please%20tell%20us%20about%20yourself%20and%20share%20your%20thoughts.">
+          <span class="fa icon-mail"></span>
         </a>
-        <a href="#"> <img src="assets/img/ftr-fb.png" alt="facebook"> </a>
-        <a href="#"> <img src="assets/img/ftr-instagram.png" alt="instagram"></a>
-        <a href="#"> <img src="assets/img/ftr-linkedin.png" alt="linkedin"></a>
+        <a href="#"> <span class="fa icon-facebook"></span></a>
+        <a href="#"> <span class="fa icon-instagram"></span></a>
+        <a href="#"> <span class="fa icon-linkedin"></span></a>
       </div>
     </div>
-    <div style="height: 1rem; background-color: grey; width: 100%;">
-
-    </div>
+    <div style="height: 1rem; background-color: grey; width: 100%;"/>
   </div>
-
-  <script>
-    function addMoreIndicatorIfOverflow(event) {
-      let t = event.target;
-      if (t.clientHeight > 0 && (t.scrollHeight - t.scrollTop > t.clientHeight)) {
-        console.log({ obj: t, ch: t.clientHeight, sh: t.scrollHeight, st: t.scrollTop });
-        t.classList.add("more-text-indicator");
-      } else {
-        t.classList.remove("more-text-indicator");
-      }
-    }
-
-    function loadScriptAsync(src) {
-      return new Promise(function (resolve, reject) {
-        const scr = document.createElement('script');
-        var resolved = false;
-        scr.type = 'text/javascript';
-        scr.async = true;
-        scr.onerror =  (err) => reject("script " + src + " not loaded: Error: " + err, scr);
-        scr.onload = scr.onreadystatechange =  () => {
-          if (!resolved && (!this.readyState || this.readyState == 'complete')) {
-            resolved = true;
-            resolve();
-            //console.log("loaded :", src);
-          }
-        };
-        scr.src = src;
-        document.body.append(scr);
-      });
-    }
-    async function loadScriptsAsync() {
-      var scripts = [
-        "assets/js/jquery-3.5.1.min.js",
-        "assets/js/modernizr.custom.js",
-        "assets/js/jquerypp.custom.js",
-        "assets/js/jquery.bookblock.js",
-        "assets/js/lets.js",
-        "assets/js/jquery.yu2fvl.js"];
-      for (const scr of scripts) {
-        await loadScriptAsync(scr);
-      }
-    }
-
-    function loadLazy() {
-      window.setTimeout(() => {
-        loadScriptsAsync().then(() => {
-          $(".play-1").each((i, el) => {
-            const jel = $(el);
-            jel.attr("href", jel.attr("data-href"));
-          });
-          $(".play-1").yu2fvl({ minPaddingX: 100, minPaddingY: 100, closeText: "&times;" });
-
-          $(".text-center").each(function (i, tw) {
-            tw.addEventListener("scroll", addMoreIndicatorIfOverflow, { passive: true });
-            window.addEventListener("resize", () => {
-              addMoreIndicatorIfOverflow({ target: tw });
-            });
-          });
-        });
-      }, 10);
-    }
-  </script>
-
 </body>
 
 </html>
