@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/aboutus.css">
+  <script src="assets/js/jquery-3.5.1.min.js"></script>
+
+</head>
+
+<body>
+  <div id="about-container">
+    <nav id="navbar">
+      <div id="logo">
+        <a href="index.html"><img src="assets/img/lets-logo-120.png"></a>
+      </div>
+      <ul id="links" class="nav">
+        <li class="nav-item"><a href="process.html">OUR PROCESS</a></li>
+        <li class="nav-item"><a href="gallery.html">GALLERY</a></li>
+        <li class="nav-item"><a href="books.html">BOOKS</a></li>
+        <li class="nav-item active-page"><a href="#">ABOUT US</a></li>
+      </ul>
+    </nav>
+
+    <div id="anim-container">
+      <div id="anim-slider" class="slider">
+        <div id="00" class="slide"><img src="assets/img/about_anim/00.jpg"></div>
+        <div id="01" class="slide"><img src="assets/img/about_anim/01.jpg"></div>
+        <div id="02" class="slide"><img src="assets/img/about_anim/03.jpg"></div>
+        <div id="03" class="slide"><img src="assets/img/about_anim/04.jpg"></div>
+        <div id="04" class="slide"><img src="assets/img/about_anim/05.jpg"></div>
+        <div id="05" class="slide"><img src="assets/img/about_anim/06.jpg"></div>
+        <div id="06" class="slide"><img src="assets/img/about_anim/08.jpg"></div>
+        <div id="07" class="slide"><img src="assets/img/about_anim/09.jpg"></div>
+        <div id="08" class="slide"><img src="assets/img/about_anim/10.jpg"></div>
+        <div id="09" class="slide"><img src="assets/img/about_anim/11.jpg"></div>
+        <div id="10" class="slide"><img src="assets/img/about_anim/12.jpg"></div>
+        <div id="11" class="slide"><img src="assets/img/about_anim/13.jpg"></div>
+      </div>
+    </div>
+    <div id="anim-control" style="text-align: center;margin-top:10px">
+      <a id="play" class="fa icon-play" onclick="togglePlayPause();"></a>
+      Rough animation sketches for "Monster and the Little Boy", by Umesh Wagh
+    </div>
+    <h2> About LeTS </h2>
+    <div class="about">
+      <p>
+        The Learn Through Stories (LeTS) initiative reinforces the role of children as content creators rather than mere
+        consumers, and enables them to learn about language, environment, culture, history and more, using storytelling
+        and
+        art as learning pedagogies.
+      </p>
+      <p>The LeTS approach</p>
+
+      <ul>
+        <li>gives a voice, identity, and a platform to the child's imagination</li>
+        <li>
+          brings in confidence with the collaborative effort between the child and professional designers, animators,
+          picture book artists and illustrators
+        </li>
+        <li>is curated and tested by a team from IIT Bombay across schools in India</li>
+      </ul>
+      <p>
+        In collaboration with IIT Bombay, the Learn Through Stories (LeTS) Foundation aims to disseminate this alternate
+        approach to learning - LeTS - by conducting content creation workshops and collecting contextual stories from
+        schools in India, both rural and urban, to foster content co-creation, teach book design and production, and
+        publish
+        books that return to all students and teachers. Our products include a curated process of content creation,
+        physical
+        story books, and their digital parallels in the form of animation films and interactive applications. Our sole
+        objective is to maximise social impact in the field of learning and education across India.
+      </p>
+
+      We, Alka Hingorani, Arti Kalro and Gayathri Thakoor, form the core team at Learn Through Stories (LeTS)
+      Foundation.
+
+    </div>
+
+    <h2> Our Team </h2>
+    <div class="team">
+      <div class="member">
+        <div class="mugshot"><img src="assets/img/alka.jpg"></div>
+        <div class="profile">
+          Alka Hingorani is Associate Professor in the School of Design (IDC), at IIT-Bombay. She is an architect and an
+          art historian. She holds masters degrees in Design (Photography), City and Regional Planning, and a MA/PhD in 
+          History of Art, all from the University of California, Berkeley, where she also
+          taught briefly before her return to India. Her research interests include art and identity, storytelling as
+          academic practice, and pedagogy at the cusp of classroom teaching and technology. She loves poetry, pottery,
+          the outdoors, and a scrap of solitude.
+
+        </div>
+      </div>
+
+
+      <div class="member">
+        <div class="mugshot"><img src="assets/img/gayathri.jpg"></div>
+        <div class="profile">Gayathri Thakoor is a co-founder and the CEO of this social enterprise. A published author,
+          manager, and entrepreneur, her years of starting out as a news journalist sharing people stories to finally
+          signing off as Program Lead at the Tata Centre for Technology and Design team, at IIT Bombay, have seen rich
+          experiences over 25 years. Taking the learnings out of these, she believes that collaboration is key. For
+          better and more.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script>
+    const slides = $(".slide");
+    const slider = $("#anim-slider"); // dom element
+    const delay = 4000;
+    var isPaused = true;
+    var timer = null;
+    function animLoop() {
+      clearTimeout(timer);
+      if (isPaused) {
+        console.log("anim paused");
+        return;
+      }
+      // At each iteration, scroll to the closest child on the right
+      // This works even if the window is manually scrolled. 
+      // If the last child is in the scroll window, then wait a little and scrollback.
+      const _slider = slider[0]; // dom element
+      if (_slider.clientWidth > 0 && (_slider.scrollWidth - _slider.scrollLeft <= _slider.clientWidth)) {
+        // Reached the end. delay some more, then reset to left.
+        console.log("anim reached end");
+
+        timer = setTimeout(() => {
+          slider.animate({ scrollLeft: slides[0].offsetLeft }, 300);
+          animLoop();
+        }, delay * 1.5);
+      } else {
+        for (let i = 0; i < slides.length; i++) {
+          const slide = slides[i];
+
+          if (slide.offsetLeft - _slider.scrollLeft > 15) {
+            slider.animate({ scrollLeft: slide.offsetLeft - 2}, 800); // -2 to not obscure the left border
+            timer = setTimeout(animLoop, delay);
+            break;
+          }
+        }
+      }
+    }
+    slider.scrollLeft(slides[0].offsetLeft);
+
+    function togglePlayPause() {
+      isPaused = !isPaused;
+      if (isPaused) {
+        $("#play").removeClass("icon-pause").addClass("icon-play")
+      } else {
+        $("#play").removeClass("icon-play").addClass("icon-pause")
+        animLoop();
+      }
+    }
+  </script>
+</body>
+
+</html>
