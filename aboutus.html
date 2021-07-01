@@ -84,20 +84,6 @@
     <h2> Our Team </h2>
     <div class="team">
       <div class="member">
-        <div class="mugshot"><img src="assets/img/alka.jpg"></div>
-        <div class="profile">
-          Alka Hingorani is Associate Professor in the School of Design (IDC), at IIT-Bombay. She is an architect and an
-          art historian. She holds masters degrees in Design (Photography), City and Regional Planning, and a MA/PhD in 
-          History of Art, all from the University of California, Berkeley, where she also
-          taught briefly before her return to India. Her research interests include art and identity, storytelling as
-          academic practice, and pedagogy at the cusp of classroom teaching and technology. She loves poetry, pottery,
-          the outdoors, and a scrap of solitude.
-
-        </div>
-      </div>
-
-
-      <div class="member">
         <div class="mugshot"><img src="assets/img/gayathri.jpg"></div>
         <div class="profile">Gayathri Thakoor is a co-founder and the CEO of this social enterprise. A published author,
           manager, and entrepreneur, her years of starting out as a news journalist sharing people stories to finally
@@ -106,8 +92,33 @@
           better and more.
         </div>
       </div>
-    </div>
 
+      <div class="member">
+        <div class="mugshot"><img src="assets/img/alka.jpg"></div>
+        <div class="profile">
+          Alka Hingorani is Associate Professor in the School of Design (IDC), at IIT-Bombay. She is an architect and an
+          art historian. She holds masters degrees in Design (Photography), City and Regional Planning, and a MA/PhD in
+          History of Art, all from the University of California, Berkeley, where she also
+          taught briefly before her return to India. Her research interests include art and identity, storytelling as
+          academic practice, and pedagogy at the cusp of classroom teaching and technology. She loves poetry, pottery,
+          the outdoors, and a scrap of solitude.
+
+        </div>
+      </div>
+
+      <div class="member">
+        <div class="mugshot"><img src="assets/img/arti.jpg"></div>
+        <div class="profile">
+          Arti Kalro is a faculty in the Shailesh J Mehta School of Management at IIT Bombay. Her areas of expertise
+          include Marketing and Social Innovations. While designing and teaching a course, Technology and Design for
+          End-to-End Innovations for resource-constrained communities, she continued to grow her interest in helping
+          Alka translate her dream of the LeTS' vision into the market. And here she is now, along with Gayathri & Alka
+          trying to take LeTS to every child, everywhere in India. When Arti isn’t teaching or racking her brain on
+          scaling-up LeTS, she is busy (and immensely happy) spending time with children, getting their hands dirty with
+          paint and clay.
+        </div>
+      </div>
+    </div>
   </div>
 
 
@@ -140,7 +151,7 @@
           const slide = slides[i];
 
           if (slide.offsetLeft - _slider.scrollLeft > 15) {
-            slider.animate({ scrollLeft: slide.offsetLeft - 2}, 800); // -2 to not obscure the left border
+            slider.animate({ scrollLeft: slide.offsetLeft - 2 }, 800); // -2 to not obscure the left border
             timer = setTimeout(animLoop, delay);
             break;
           }
