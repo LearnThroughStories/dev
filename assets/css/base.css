@@ -124,33 +124,6 @@ body {
   top: 1.5rem;
 }
 
-.coming-soon {
-  position: relative;
-}
-
-.coming-soon .coming-soon-text {
-  visibility: hidden;
-  width: 10rem;
-  height: 2rem;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  font-size: 1rem;
-  line-height: 1.5rem;
-
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 3;
-  top: 100%;
-  right: 0;
-}
-
-.coming-soon:hover .coming-soon-text {
-  visibility: visible;
-}
-
 #logo {
   margin-left: 0px;
   margin-right: auto;
