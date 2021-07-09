@@ -52,13 +52,13 @@
         <div class="slide"><img src="assets/img/about_anim/07-rooster-a.jpg"></div>
         <div class="slide"><img src="assets/img/about_anim/07-rooster-b.jpg"></div>
       </div>
+      <div id="anim-control" style="text-align: end;margin-top:10px">
+        <a id="play" class="fa icon-pause" onclick="togglePlayPause();"></a>
+        Rough sketches and finished artwork for Rokuroo animation, by Gyan Selvam
+      </div>  
     </div>
-    <div id="anim-control" style="text-align: center;margin-top:10px">
-      <a id="play" class="fa icon-play" onclick="togglePlayPause();"></a>
-      Rough sketches and finished artwork for Rokuroo animation, by Gyan Selvam
-    </div>
-    <h2> About LeTS </h2>
     <div class="about">
+      <h2 style="text-align: start;"> About LeTS </h2>
       The Learn Through Stories Foundation enables students to learn through content they have themselves helped
       produce.
     </div>
@@ -108,8 +108,8 @@
 
     <div class="team" style="margin-top:4rem;">
       <div class="member">
-        <img src="assets/img/about-bird-cloud.png" style="position: absolute; left: 0; width:20%; height: auto;" alt=""
-          srcset="">
+        <!-- <img src="assets/img/about-bird-cloud.png" style="position: absolute; left: 0; width:20%; height: auto;" alt=""
+          srcset=""> -->
         <div class="profile">
           <h2 style="text-align: start;"> Our Team </h2>
         </div>
@@ -198,7 +198,7 @@
     const slides = $(".slide");
     const slider = $("#anim-slider"); // dom element
     const delay = 4000;
-    var isPaused = true;
+    var isPaused = false;
     var timer = null;
     function animLoop() {
       clearTimeout(timer);
@@ -228,6 +228,7 @@
       }
     }
     slider.scrollLeft(slides[0].offsetLeft);
+    timer=setTimeout(animLoop, delay);
     
     function togglePlayPause() {
       isPaused = !isPaused;

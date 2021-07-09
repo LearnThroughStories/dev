@@ -152,11 +152,11 @@ body {
 }
 
 #links a:hover {
-  color: rgb(178, 69, 52);
+  color: #994e20;
 }
 
 #links .active-page {
-  border-bottom: 2px solid rgb(178, 69, 52);
+  border-bottom: 2px solid #994e20;
 }
 
 /* Menu end */
