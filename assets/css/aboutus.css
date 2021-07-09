@@ -1,7 +1,6 @@
 #about-container {
   width: 100%;
   background-image: url("../img/default-bg.jpg");
-  background-position-y: 50%;
   text-align: start;
   line-height: 150%;
 }
@@ -63,7 +62,8 @@
 }
 
 .about {
-  width: 80%;
+  width: 90%;
+  text-align: start ;
   margin-left: auto;
   margin-right: auto;
 }
@@ -71,12 +71,22 @@
   margin-left: 2rem;
   margin-bottom: 1rem;
 }
-.about p {
+.about {
   margin-bottom: 1rem;
 }
 
+.floater {
+  float: right;
+  width: 40%;
+}
+
+.floater img {
+  width: 100%;
+  height: auto;
+}
+
 .team {
-  width: 80%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -94,11 +104,26 @@ h2 {
 
 }
 
-.mugshot {
-  width: 8rem;
-  height: 8rem;
-  border-radius: 50%;
+.square {
+  width: 95%;
+  height: 0;
   grid-column-start: 1;
+  position: relative;
+  content:"";
+  padding-top:95%;
+  display: block;
+}
+
+.mugshot {
+  position:absolute;
+  
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  line-height: 100%;
+  border-radius: 50%;
 }
 
 .mugshot img {
@@ -108,6 +133,7 @@ h2 {
   border: 3px solid white;
   object-fit: contain;
 }
+
 
 .profile {
   grid-column-start: 2;
