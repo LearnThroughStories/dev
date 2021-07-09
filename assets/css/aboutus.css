@@ -47,7 +47,7 @@
 }
 
 .slide {
-  margin: 10px;
+  margin: 5px;
   height: 90%;
   padding: 10px;
   background: white;
@@ -138,57 +138,3 @@ h2 {
   grid-column-start: 2;
 }
 
-
-.visually-hidden {
-  border-width: 0 !important;
-  clip: rect(1px, 1px, 1px, 1px) !important;
-  height: 1px !important;
-  overflow: hidden !important;
-  padding: 0 !important;
-  position: absolute !important;
-  white-space: nowrap !important;
-  width: 1px !important;
-}
-
-#mc_embed_signup{
-	clear:left; 
-	font-family:"Hepta Slab", serif; 
-}
-
-#mc-embedded-subscribe{
-	padding: 10px;
-	border: 1px solid grey;
-	font-family: "Hepta Slab", serif; 
-}
-
-#mce-NAME, #mce-EMAIL, #mce-QUERY{
-	padding: 10px;
-	font-family:"Hepta Slab", serif; 
-}
-
-#mc_embed_signup form {
-    display: block;
-    position: relative;
-    text-align: left;
-    padding: 10px 0 10px 3%;
-}
-
-#mc_embed_signup .mc-field-group {
-    clear: left;
-    position: relative;
-    width: 96%;
-    padding-bottom: 3%;
-    min-height: 50px;
-}
-
-#mc_embed_signup .mc-field-group input {
-    display: block;
-    width: 100%;
-    padding: 8px 0;
-    text-indent: 2%;
-}
-#mc_embed_signup input {
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-}

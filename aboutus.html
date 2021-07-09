@@ -205,7 +205,6 @@
     function animLoop() {
       clearTimeout(timer);
       if (isPaused) {
-        console.log("anim paused");
         return;
       }
       // At each iteration, scroll to the closest child on the right
@@ -214,12 +213,10 @@
       const _slider = slider[0]; // dom element
       if (_slider.clientWidth > 0 && (_slider.scrollWidth - _slider.scrollLeft <= _slider.clientWidth)) {
         // Reached the end. delay some more, then reset to left.
-        console.log("anim reached end");
-
+        slider.animate({ scrollLeft: slides[0].offsetLeft }, 300);
         timer = setTimeout(() => {
-          slider.animate({ scrollLeft: slides[0].offsetLeft }, 300);
           animLoop();
-        }, delay * 1.5);
+        }, delay);
       } else {
         for (let i = 0; i < slides.length; i++) {
           const slide = slides[i];
