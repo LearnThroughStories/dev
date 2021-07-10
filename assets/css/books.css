@@ -38,7 +38,7 @@
     grid-template-areas: 
           "ck  ck er kh "
           "ck  ck  ma rc"
-          "bm  bc  ro ro"
+          "bm  bc1  ro ro"
           "tc  cm  ro ro"
           "fc  mg  mr mr"
           "bc2 bc3 mr mr";
