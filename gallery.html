@@ -20,7 +20,16 @@
 
         #gallery-container {
             width: 100%;
-            background-image: url("./assets/img/default-bg.jpg");
+            background-image: 
+                -webkit-image-set(
+                    url(assets/img/default-bg-1200.webp) 1x,
+                    url(assets/img/default-bg-1200.jpg) 1x
+                );
+            background-image: 
+                image-set(
+                    url(../img/default-bg-1200.webp) 1x,
+                    url(../img/default-bg-1200.jpg) 1x
+                );
         }
 
         #nanogallery {

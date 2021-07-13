@@ -142,6 +142,7 @@ h2 {
 .bg-img {
   /*margin-bottom: 10px;  This is for debugging, for seeing the splits between the background images*/
   width: 100%;
+  height: auto;
 }
 
 

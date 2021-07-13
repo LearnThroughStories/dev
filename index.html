@@ -76,7 +76,12 @@
 
 <body>
   <div id="top-section" class="section">
-    <img class="bg-img" src="./assets/img/bg-1200-1.jpg" />
+    <picture>
+      <source class="bg-img" media="(max-width: 900px)" width=900 height=1907 srcset="assets/img/bg-900-1.webp" type="image/webp">
+      <source class="bg-img" media="(max-width: 900px)" width=900 height=1907 srcset="assets/img/bg-900-1.jpg" type="image/jpeg">
+      <source class="bg-img" srcset="assets/img/bg-1200-1.webp" width="1200" height="2542" type="image/webp">
+      <img class="bg-img" src="./assets/img/bg-1200-1.jpg" width="1200" height="2542" />
+    </picture>
     <nav id="navbar" style="position:absolute">
       <div id="logo">
         <a href="index.html"><img src="assets/img/lets-logo-120.png"></a>
@@ -119,7 +124,12 @@
     </div>
   </div>
   <div id="bottom-section" class="section">
-    <img class="bg-img" loading="lazy" src="./assets/img/bg-1200-2.jpg" onload="loadLazy();"/>
+    <picture>
+      <source class="bg-img" media="(max-width: 900px)" width="900" height="1996" srcset="assets/img/bg-900-2.webp" type="image/webp">
+      <source class="bg-img" media="(max-width: 900px)" width="900" height="1996" srcset="assets/img/bg-900-2.jpg" type="image/jpeg">
+      <source class="bg-img" srcset="assets/img/bg-1200-2.webp" width="1200" height="2661" type="image/webp">
+      <img class="bg-img" src="./assets/img/bg-1200-2.jpg" width="1200" height="2661"/>
+    </picture>
     <div id="books-text-wrapper" class="text-wrapper">
       <div class=text-center>
         <div>

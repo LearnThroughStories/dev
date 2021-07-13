@@ -1,6 +1,15 @@
 #process-container {
   width: 100%;
-  background-image: url("../img/default-bg.jpg");
+  background-image: 
+    -webkit-image-set(
+      url(../img/default-bg-1200.webp) 1x,
+      url(../img/default-bg-1200.jpg) 1x
+    );
+  background-image: 
+    image-set(
+      url(../img/default-bg-1200.webp) 1x,
+      url(../img/default-bg-1200.jpg) 1x
+    );
 }
 
 #process-top {
@@ -36,6 +45,11 @@
   max-height: 150px;
   object-fit: contain;
   box-shadow: 2px 2px 4px 0 rgb(0 0 0 / 65%);
+  transition: transform .2s; /* Animation */
+}
+
+.call-for-stories img:hover {
+  transform: scale(1.2);
 }
 
 .process-grid {
