@@ -2,15 +2,17 @@ function Page() {
   var config = {
     $bookBlock: $("#bb-bookblock"),
     $bookName: null, // will fix in init
+    $isAudioAvailable: false,
   };
 
   var oldau = null;
   var aualerted = false;
 
   var playAudio = function (old, page, isLimit) {
-    if (isLimit) {
-      return false;
+    if (isLimit || !config.$isAudioAvailable) {
+      return;
     }
+
     var url = page <= 9 ? "0" + page : "" + page;
     url = "assets/audio/" + config.$bookName + "/" + url + ".mp3";
     var au = new Audio(url);
@@ -29,6 +31,16 @@ function Page() {
     });
   }; // playAudio
 
+  var afterFlip = function (old, page, isLimit) {
+    if (isLimit && page > 0) {
+        $("#end-of-sample").css({visibility: "visible"});
+    } else {
+      $("#end-of-sample").css({visibility: "hidden"});
+    }
+    playAudio(old, page, isLimit);
+  }
+
+
   var stopAudio = function () {
     if (oldau) {
       oldau.pause();
@@ -36,17 +48,20 @@ function Page() {
     }
   };
 
-  var init = function (bookname) {
+  var init = function (bookname, isAudioAvailable) {
       config.$bookName = bookname;
+      config.$isAudioAvailable = isAudioAvailable;
       config.$bookBlock.bookblock({
         speed: 300,
         shadowSides: 0.8,
         shadowFlip: 0.7,
-        onEndFlip: playAudio,
+        onEndFlip: afterFlip,
       });
       initEvents();
       stopAudio();
-      playAudio(0, 0, false); // Cover page
+      if (isAudioAvailable) {
+        playAudio(0, 0, false); // Cover page
+      }
     },
     initEvents = function () {
       var $slides = config.$bookBlock.children();
@@ -102,6 +117,7 @@ function getViewportHeight() {
 const template = `
 <div id='bb-bookblock' class='bb-bookblock'>
     <div id="book-close" onclick="closeBook()"> &times;<\/div>
+    <div id="end-of-sample">end of sample</div>
     <div class="bb-item"> <img src="assets/img/books/BOOKNAME/00.png" \/><\/div>
     <div class="bb-item"> <img src="assets/img/books/BOOKNAME/01.jpg" \/><\/div>
     <div class="bb-item"> <img src="assets/img/books/BOOKNAME/02.jpg" \/><\/div>
@@ -110,7 +126,7 @@ const template = `
 <\/div>
 `
 
-function openBook(bookname) {
+function openBook(bookname, isAudioAvailable) {
     const book_open = $("#book-open");
     book_open.css("display", "block");
     const html = template.replaceAll("BOOKNAME", bookname);
@@ -122,7 +138,7 @@ function openBook(bookname) {
         bb_bookblock.addClass("bb-vh");
     }
     const page = Page();
-    page.init(bookname);
+    page.init(bookname, isAudioAvailable);
     book_open.find("#book-close").click(() => { closeBook(page) });
 }
 

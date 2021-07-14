@@ -55,6 +55,18 @@
     /* background: white; */
     cursor: pointer;
   }
+
+  #end-of-sample {
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.793);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: absolute;
+    z-index: 1000;
+    right: 0px;
+    bottom: 0px;
+  }
   
   #book-close {
     z-index: 1000;

@@ -39,6 +39,7 @@
         document.body.append(scr);
       });
     }
+
     async function loadScriptsAsync() {
       var scripts = [
         "assets/js/jquery-3.5.1.min.js",
@@ -52,6 +53,8 @@
       }
     }
 
+    // This function is called only when the large background image on the bottom half 
+    // of the page is loaded, so that we don't delay the first content paint time. 
     function loadLazy() {
       window.setTimeout(() => {
         loadScriptsAsync().then(() => {
@@ -145,7 +148,7 @@
         </div>
       </div>
     </div>
-    <div id="book-sample" class="text-wrapper" onclick="openBook('CleverKalyani');"> <p style="text-align:end">Please click here for a sample
+    <div id="book-sample" class="text-wrapper" onclick="openBook('CleverKalyani', true);"> <p style="text-align:end">Please click here for a sample
       audiobook.</p>
     </div>
 
