@@ -96,11 +96,19 @@ h2 {
 }
 
 #book-sample {
-  top: 25.5%;
-  left: 62%;
+  top: 9%;
+  left: 58%;
   font-size: 0.8rem;
-  width: 21rem;
+  width: 43%;
+  padding-top: 39%;
   cursor: pointer;
+}
+
+#book-sample:hover p {
+  transition: all 0.5s;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: yellow;
 }
 
 #films-text-wrapper {
