@@ -32,7 +32,6 @@
           if (!resolved && (!this.readyState || this.readyState == 'complete')) {
             resolved = true;
             resolve();
-            //console.log("loaded :", src);
           }
         };
         scr.src = src;
@@ -62,7 +61,13 @@
             const jel = $(el);
             jel.attr("href", jel.attr("data-href"));
           });
+          $(".play-2").each((i, el) => {
+            const jel = $(el);
+            jel.attr("href", jel.attr("data-href"));
+          });
+
           $(".play-1").yu2fvl({ minPaddingX: 100, minPaddingY: 100, closeText: "&times;" });
+          $(".play-2").yu2fvl({ minPaddingX: 100, minPaddingY: 100, closeText: "&times;" });
 
           $(".text-center").each(function (i, tw) {
             tw.addEventListener("scroll", addMoreIndicatorIfOverflow, { passive: true });
@@ -127,14 +132,14 @@
     </div>
   </div>
   <div id="bottom-section" class="section">
-    <picture onload="console.log('picture loaded');">
+    <picture>
       <source class="bg-img" media="(max-width: 900px)" width="900" height="1996" srcset="assets/img/bg-900-2.webp" type="image/webp">
       <source class="bg-img" media="(max-width: 900px)" width="900" height="1996" srcset="assets/img/bg-900-2.jpg" type="image/jpeg">
       <source class="bg-img" srcset="assets/img/bg-1200-2.webp" width="1200" height="2661" type="image/webp">
       <img class="bg-img" onload="loadLazy()" src="./assets/img/bg-1200-2.jpg" width="1200" height="2661"/>
     </picture>
-    <div id="books-text-wrapper" class="text-wrapper">
-      <div class=text-center>
+    <div id="books-text-wrapper" class="text-wrapper" >
+      <div class=text-center style="align-items:start">
         <div>
           <h2 id="our-books">Our Books</h2>
           <div class="body-text">
@@ -148,8 +153,8 @@
         </div>
       </div>
     </div>
-    <div id="book-sample" class="text-wrapper" onclick="openBook('CleverKalyani', true);"> <p style="text-align:end">Please click here for a sample
-      audiobook.</p>
+    <div id="book-sample" class="text-wrapper" onclick="openBook('CleverKalyani', true)"> 
+      <p>Please click here for a sample audiobook.</p>
     </div>
 
     <div id="book-open"></div> <!-- div for modal -->
@@ -166,7 +171,7 @@
       </div>
     </div>
 
-    <p><a class="play-1 open-video" href="#" data-href="https://www.youtube.com/embed/GJSGdhXDzOQ"></a></p>
+    <p><a class="play-1 open-anim-video" href="#" data-href="https://www.youtube.com/embed/GJSGdhXDzOQ"></a></p>
 
     <div id="apps-text-wrapper" class="text-wrapper">
       <div class="text-center">
@@ -187,19 +192,22 @@
         </div>
       </div>
     </div>
-    <div id="footer">
-      <div id="logotext"> <img src="assets/img/ftr-logo.png"> </div>
-      <div id="social">
-        <a href="mailto:contactletsfoundation@gmail.com?body=Please%20tell%20us%20about%20yourself%20and%20share%20your%20thoughts.">
-          <span class="fa icon-mail"></span>
-        </a>
-        <a href="#"> <span class="fa icon-facebook"></span></a>
-        <a href="#"> <span class="fa icon-instagram"></span></a>
-        <a href="#"> <span class="fa icon-linkedin"></span></a>
-      </div>
+    <div id="intro-video" class="play-2" data-href="https://www.youtube.com/embed/drc0QWWHPXQ">
+      <div style="align-items:flex-end"> A short introduction by Prof. Alka Hingorani. </div>
     </div>
-    <div style="height: 1rem; background-color: grey; width: 100%;"/>
   </div>
+  <div id="footer">
+    <div id="logotext"> <img src="assets/img/ftr-logo.png"> </div>
+    <div id="social">
+      <a href="mailto:contactletsfoundation@gmail.com?body=Please%20tell%20us%20about%20yourself%20and%20share%20your%20thoughts.">
+        <span class="fa icon-mail"></span>
+      </a>
+      <a href="#"> <span class="fa icon-facebook"></span></a>
+      <a href="#"> <span class="fa icon-instagram"></span></a>
+      <a href="#"> <span class="fa icon-linkedin"></span></a>
+    </div>
+  </div>
+  <div style="height: 1rem; background-color: grey; width: 100%;"/>
 </body>
 
 </html>
