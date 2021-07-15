@@ -62,6 +62,14 @@ body > .section {
   top: 34%;
 }
 
+#intro-text-wrapper {
+  width: 45%;
+  height: 16.5%;
+  color: rgb(56, 63, 57);
+  left: 53%;
+  top: 33%;
+}
+
 #logo-text-wrapper {
   width: 40%;
   top: 51%;
@@ -98,7 +106,7 @@ h2 {
 #book-sample {
   display: flex;
   flex-direction: column;
-  top: 9.4%;
+  top: 10%;
   left: 58%;
   font-size: 0.8rem;
   width: 42%;
@@ -120,8 +128,9 @@ h2 {
   height: 11%;
   color: rgb(56, 63, 57);
   left: 40%;
-  top: 27%;
+  top: 29%;
 }
+
 
 .open-anim-video {
 	height:300px;
@@ -136,19 +145,19 @@ h2 {
 
 
 #apps-text-wrapper {
-  width: 44%;
-  height: 7%;
+  width: 49%;
+  height: 8%;
   color: rgb(56, 63, 57);
-  left: 52%;
-  top: 55%;
+  left: 50%;
+  top: 56.5%;
 }
 
 #other-sub-text-wrapper {
   width: 53%;
-  height: 4%;
+  height: 6%;
   color: rgb(56, 63, 57);
   left: 40%;
-  top: 64%;
+  top: 65%;
 }
 
 .bg-img {

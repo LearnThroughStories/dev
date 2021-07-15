@@ -25,7 +25,7 @@ Artwork_Monster_PencilDrawing_01.jpg: art
    Student artwork (Std. VII) for “The Monster and the Little Boy”, Gram Mangal School, Dahanu, Maharashtra
 
 Artwork_Monster.jpg: art
-   Rupesh Vadhav (Std. VII). Artwork for “The Monster and the Little Boy”, Gram Mangal School, Dahanu, Maharashtra
+   Artwork by Rupesh Vadhav (Std. VII) for "The Monster and The Little Boy", Gram Mangal School, Dahanu, Maharashtra
 
 Artwork_MonsterFace.jpg: art
    Student artwork (Std. VII) for “The Monster and the Little Boy”, Gram Mangal School, Dahanu, Maharashtra
