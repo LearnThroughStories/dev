@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="./assets/css/books-base.css" />
   <script>
     function addMoreIndicatorIfOverflow(event) {
+      console.log({addMoreIndicatorIfOverflow: event.target});
       let t = event.target;
       if (t.clientHeight > 0 && (t.scrollHeight - t.scrollTop > t.clientHeight)) {
         t.classList.add("more-text-indicator");
@@ -70,6 +71,8 @@
           $(".play-2").yu2fvl({ minPaddingX: 100, minPaddingY: 100, closeText: "&times;" });
 
           $(".text-center").each(function (i, tw) {
+            addMoreIndicatorIfOverflow({ target: tw }); // first time, on page load
+            // also, when each one is scrolled, or the page is resized.
             tw.addEventListener("scroll", addMoreIndicatorIfOverflow, { passive: true });
             window.addEventListener("resize", () => {
               addMoreIndicatorIfOverflow({ target: tw });

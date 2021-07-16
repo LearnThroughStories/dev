@@ -175,6 +175,6 @@ h2 {
   cursor: pointer;
 }
 
-s.more-text-indicator {
+.more-text-indicator {
   box-shadow: 0 -1em 1em -1em rgb(90, 90, 52) inset;
 }
